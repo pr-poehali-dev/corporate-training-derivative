@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 
 const PricingAndFAQ = () => {
@@ -158,6 +160,53 @@ const PricingAndFAQ = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Demo Request section */}
+      <section id="демо" className="py-8 md:py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-6 md:mb-12">
+            <Badge className="mb-2 md:mb-4 text-xs">Демо-версия</Badge>
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Попробуйте бесплатно</h2>
+            <p className="text-sm md:text-xl text-muted-foreground px-4">
+              Оставьте заявку, и мы предоставим доступ к демо-версии платформы
+            </p>
+          </div>
+          <Card>
+            <CardContent className="p-4 md:p-6">
+              <form className="space-y-3 md:space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Имя *</label>
+                    <Input placeholder="Ваше имя" required />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Компания *</label>
+                    <Input placeholder="Название компании" required />
+                  </div>
+                </div>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Email *</label>
+                    <Input type="email" placeholder="email@company.com" required />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Телефон *</label>
+                    <Input placeholder="+7 (___) ___-__-__" required />
+                  </div>
+                </div>
+                <div>
+                  <label className="text-sm font-medium mb-2 block">Количество сотрудников</label>
+                  <Input placeholder="Например: 50-100" />
+                </div>
+                <Button size="default" className="w-full text-sm">
+                  Получить демо-доступ
+                  <Icon name="Rocket" className="ml-2" size={16} />
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

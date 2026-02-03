@@ -81,52 +81,6 @@ const PartnershipAndFooter = () => {
         </div>
       </section>
 
-      <section id="контакты" className="py-8 md:py-20 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-6 md:mb-16">
-            <Badge className="mb-2 md:mb-4 text-xs">Контакты</Badge>
-            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Начните сегодня</h2>
-            <p className="text-sm md:text-xl text-muted-foreground px-4">
-              Оставьте заявку, и мы свяжемся с вами в течение часа
-            </p>
-          </div>
-          <Card>
-            <CardContent className="p-4 md:p-6">
-              <form className="space-y-3 md:space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Имя</label>
-                    <Input placeholder="Ваше имя" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Компания</label>
-                    <Input placeholder="Название компании" />
-                  </div>
-                </div>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Email</label>
-                    <Input type="email" placeholder="email@company.com" />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Телефон</label>
-                    <Input placeholder="+7 (___) ___-__-__" />
-                  </div>
-                </div>
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Сообщение</label>
-                  <Textarea placeholder="Расскажите о ваших задачах..." rows={4} />
-                </div>
-                <Button size="default" className="w-full text-sm">
-                  Отправить заявку
-                  <Icon name="Send" className="ml-2" size={16} />
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       <footer className="bg-foreground text-background py-6 md:py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
