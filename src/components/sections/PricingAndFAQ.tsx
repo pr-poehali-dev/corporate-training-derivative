@@ -45,7 +45,7 @@ const PricingAndFAQ = () => {
           </div>
           
           {/* Mobile: Slider */}
-          <div className="relative md:hidden max-w-md mx-auto">
+          <div className="relative md:hidden max-w-sm mx-auto px-4">
             <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
@@ -56,7 +56,7 @@ const PricingAndFAQ = () => {
                 {plans.map((plan, idx) => (
                   <div 
                     key={idx} 
-                    className="w-full flex-shrink-0 px-4"
+                    className="w-full flex-shrink-0 px-2"
                   >
                     <Card className={`h-full ${
                       plan.popular ? 'border-primary shadow-xl relative' : ''
