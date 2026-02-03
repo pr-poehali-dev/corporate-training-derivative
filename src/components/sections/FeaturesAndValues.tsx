@@ -5,16 +5,16 @@ import Icon from '@/components/ui/icon';
 const FeaturesAndValues = () => {
   return (
     <>
-      <section id="ценности" className="py-20 px-4 bg-muted/30">
+      <section id="ценности" className="py-12 md:py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Ценности для бизнеса</Badge>
-            <h2 className="text-4xl font-bold mb-4">Что получит ваша компания</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-8 md:mb-16">
+            <Badge className="mb-3 md:mb-4">Ценности для бизнеса</Badge>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4">Что получит ваша компания</h2>
+            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               Измеримые результаты для вашего бизнеса
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               { icon: 'TrendingUp', title: 'Рост экспертизы', desc: 'Повышение квалификации сотрудников через системное обучение', highlight: true },
               { icon: 'Wallet', title: 'Экономия на аттестациях', desc: 'Автоматизация процесса проверки знаний и сертификации' },
@@ -37,16 +37,16 @@ const FeaturesAndValues = () => {
         </div>
       </section>
 
-      <section id="возможности" className="py-20 px-4">
+      <section id="возможности" className="py-12 md:py-20 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Возможности</Badge>
-            <h2 className="text-4xl font-bold mb-4">Всё для эффективного обучения</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-8 md:mb-16">
+            <Badge className="mb-3 md:mb-4">Возможности</Badge>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4">Всё для эффективного обучения</h2>
+            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               Комплексная платформа с инструментами для создания, управления и аналитики обучения
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               { icon: 'Sparkles', title: 'Генератор курсов на ИИ', desc: 'Создавайте полноценные курсы из ваших документов за минуты с помощью искусственного интеллекта', highlight: true },
               { icon: 'Boxes', title: 'Конструктор курсов', desc: 'Создавайте интерактивные курсы с видео, тестами и заданиями' },
@@ -72,16 +72,16 @@ const FeaturesAndValues = () => {
         </div>
       </section>
 
-      <section id="как-работает" className="py-20 px-4 bg-muted/30">
+      <section id="как-работает" className="py-12 md:py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Процесс</Badge>
-            <h2 className="text-4xl font-bold mb-4">Как это работает</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-8 md:mb-16">
+            <Badge className="mb-3 md:mb-4">Процесс</Badge>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4">Как это работает</h2>
+            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               Простой процесс внедрения за 3 шага
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
             {[
               { num: '01', icon: 'Search', title: 'Обследование', desc: 'Анализируем бизнес-процессы компании и определяем объёмы материалов для цифровизации. Выявляем ключевые области для обучения.' },
               { num: '02', icon: 'Settings', title: 'Внедрение', desc: 'Брендируем платформу под ваш стиль, настраиваем систему наград и геймификации. Обучаем администраторов работе с платформой.' },
@@ -106,9 +106,9 @@ const FeaturesAndValues = () => {
         </div>
       </section>
 
-      <section id="преимущества" className="py-20 px-4">
+      <section id="преимущества" className="py-12 md:py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <Badge className="mb-4">Преимущества</Badge>
               <h2 className="text-4xl font-bold mb-6">Почему выбирают нас</h2>

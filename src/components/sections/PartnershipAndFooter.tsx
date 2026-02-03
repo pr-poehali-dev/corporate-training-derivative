@@ -8,25 +8,25 @@ import Icon from '@/components/ui/icon';
 const PartnershipAndFooter = () => {
   return (
     <>
-      <section id="партнёрам" className="py-20 px-4">
+      <section id="партнёрам" className="py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-12">
-            <Badge className="mb-4">Партнёрская программа</Badge>
-            <h2 className="text-4xl font-bold mb-4">Стать партнером</h2>
+          <div className="text-center mb-8 md:mb-12">
+            <Badge className="mb-3 md:mb-4">Партнёрская программа</Badge>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4">Стать партнером</h2>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
-            <div className="space-y-6">
-              <p className="text-lg leading-relaxed text-muted-foreground">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start mb-8 md:mb-12">
+            <div className="space-y-4 md:space-y-6">
+              <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
                 Становясь нашим партнером, вы получаете возможность предлагать и распространять инновационную платформу корпоративного обучения в вашем регионе. Мы предоставляем полную поддержку на всех этапах — от обучения работе с продуктом до технической поддержки ваших клиентов.
               </p>
               
-              <p className="text-lg leading-relaxed text-muted-foreground">
+              <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
                 Вы сможете проводить демонстрации для потенциальных клиентов, получать партнёрское вознаграждение от каждой успешной сделки и наращивать собственную экспертизу в сфере EdTech. Мы ищем амбициозных профессионалов, готовых развивать бизнес в сфере корпоративного обучения.
               </p>
 
-              <div className="bg-muted/50 rounded-xl p-6 space-y-3 border">
-                <h3 className="font-bold text-lg mb-4">Что вы получаете:</h3>
+              <div className="bg-muted/50 rounded-xl p-4 md:p-6 space-y-3 border">
+                <h3 className="font-bold text-base md:text-lg mb-3 md:mb-4">Что вы получаете:</h3>
                 {[
                   'Партнёрское вознаграждение от продаж',
                   'Доступ к демо-версии платформы',
@@ -85,12 +85,12 @@ const PartnershipAndFooter = () => {
         </div>
       </section>
 
-      <section id="контакты" className="py-20 px-4 bg-muted/30">
+      <section id="контакты" className="py-12 md:py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Контакты</Badge>
-            <h2 className="text-4xl font-bold mb-4">Начните сегодня</h2>
-            <p className="text-xl text-muted-foreground">
+          <div className="text-center mb-8 md:mb-16">
+            <Badge className="mb-3 md:mb-4">Контакты</Badge>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4">Начните сегодня</h2>
+            <p className="text-base md:text-xl text-muted-foreground px-4">
               Оставьте заявку, и мы свяжемся с вами в течение часа
             </p>
           </div>
@@ -131,7 +131,7 @@ const PartnershipAndFooter = () => {
         </div>
       </section>
 
-      <footer className="bg-foreground text-background py-12 px-4">
+      <footer className="bg-foreground text-background py-8 md:py-12 px-4">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>

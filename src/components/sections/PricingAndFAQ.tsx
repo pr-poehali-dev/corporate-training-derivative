@@ -7,16 +7,16 @@ import Icon from '@/components/ui/icon';
 const PricingAndFAQ = () => {
   return (
     <>
-      <section id="цены" className="py-20 px-4 bg-muted/30">
+      <section id="цены" className="py-12 md:py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Тарифы</Badge>
-            <h2 className="text-4xl font-bold mb-4">Прозрачные цены</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-8 md:mb-16">
+            <Badge className="mb-3 md:mb-4">Тарифы</Badge>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4">Прозрачные цены</h2>
+            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               Выберите тариф под размер вашей команды
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {[
               {
                 name: 'Стартовый',
@@ -71,11 +71,11 @@ const PricingAndFAQ = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-20 px-4 bg-muted/30">
+      <section id="faq" className="py-12 md:py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-3xl">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">FAQ</Badge>
-            <h2 className="text-4xl font-bold mb-4">Частые вопросы</h2>
+          <div className="text-center mb-8 md:mb-16">
+            <Badge className="mb-3 md:mb-4">FAQ</Badge>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4">Частые вопросы</h2>
           </div>
           <Accordion type="single" collapsible className="space-y-4">
             {[

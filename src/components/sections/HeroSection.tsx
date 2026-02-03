@@ -4,39 +4,39 @@ import Icon from '@/components/ui/icon';
 
 const HeroSection = () => {
   return (
-    <section id="главная" className="pt-32 pb-20 px-4">
+    <section id="главная" className="pt-24 md:pt-32 pb-12 md:pb-20 px-4">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="animate-fade-in">
-            <Badge className="mb-4" variant="secondary">Корпоративное обучение</Badge>
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="animate-fade-in text-center lg:text-left">
+            <Badge className="mb-3 md:mb-4" variant="secondary">Корпоративное обучение</Badge>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
               Система обучения под вашу компанию
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8">
               Повышайте экспертизу сотрудников, экономьте на аттестациях и сокращайте ошибки в работе. Быстрый онбординг новичков и цифровизация локальных документов.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="text-lg px-8 bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30">
-                <Icon name="Play" className="mr-2" size={20} />
+            <div className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
+              <Button size="lg" className="text-base md:text-lg px-6 md:px-8 bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30">
+                <Icon name="Play" className="mr-2" size={18} />
                 Смотреть демо
               </Button>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-              <div className="bg-muted/50 rounded-xl p-4 border">
-                <div className="text-2xl font-bold text-primary mb-1">Без капзатрат</div>
-                <div className="text-sm text-muted-foreground">на разработку платформы</div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12">
+              <div className="bg-muted/50 rounded-xl p-3 md:p-4 border">
+                <div className="text-xl md:text-2xl font-bold text-primary mb-1">Без капзатрат</div>
+                <div className="text-xs md:text-sm text-muted-foreground">на разработку платформы</div>
               </div>
-              <div className="bg-muted/50 rounded-xl p-4 border">
-                <div className="text-2xl font-bold text-primary mb-1">Быстрый запуск</div>
-                <div className="text-sm text-muted-foreground">внедрение системы за 1 день</div>
+              <div className="bg-muted/50 rounded-xl p-3 md:p-4 border">
+                <div className="text-xl md:text-2xl font-bold text-primary mb-1">Быстрый запуск</div>
+                <div className="text-xs md:text-sm text-muted-foreground">внедрение системы за 1 день</div>
               </div>
-              <div className="bg-muted/50 rounded-xl p-4 border">
-                <div className="text-2xl font-bold text-primary mb-1">-70% времени</div>
-                <div className="text-sm text-muted-foreground">на обучение новых сотрудников</div>
+              <div className="bg-muted/50 rounded-xl p-3 md:p-4 border">
+                <div className="text-xl md:text-2xl font-bold text-primary mb-1">-70% времени</div>
+                <div className="text-xs md:text-sm text-muted-foreground">на обучение новых сотрудников</div>
               </div>
             </div>
           </div>
-          <div className="relative animate-slide-up">
+          <div className="relative animate-slide-up hidden lg:block">
             <div className="relative bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl p-8 backdrop-blur-sm border">
               <div className="bg-card rounded-2xl shadow-2xl overflow-hidden">
                 <div className="bg-primary/10 p-4 border-b">
