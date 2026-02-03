@@ -28,7 +28,7 @@ const Index = () => {
               <span className="text-xl font-bold">EduPlatform</span>
             </div>
             <div className="hidden md:flex items-center gap-6">
-              {['Главная', 'Возможности', 'Преимущества', 'Цены', 'Контакты'].map((item) => (
+              {['Главная', 'Возможности', 'Преимущества', 'Цены', 'Партнёрам'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -38,7 +38,10 @@ const Index = () => {
                 </button>
               ))}
             </div>
-            <Button>Попробовать бесплатно</Button>
+            <Button className="bg-primary hover:bg-primary/90 shadow-lg shadow-primary/30">
+              <Icon name="Play" className="mr-2" size={18} />
+              Смотреть демо
+            </Button>
           </div>
         </div>
       </nav>
@@ -52,30 +55,26 @@ const Index = () => {
                 Система обучения под вашу компанию
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Настройка под специфику и процессы вашей компании. Внедрение от 2 недель.
+                Повышайте экспертизу сотрудников, экономьте на аттестациях и сокращайте ошибки в работе. Быстрый онбординг новичков и цифровизация локальных документов.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="text-lg px-8">
-                  Начать бесплатно
-                  <Icon name="ArrowRight" className="ml-2" size={20} />
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8">
+                <Button size="lg" className="text-lg px-8 bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30">
+                  <Icon name="Play" className="mr-2" size={20} />
                   Смотреть демо
-                  <Icon name="Play" className="ml-2" size={20} />
                 </Button>
               </div>
-              <div className="flex items-center gap-8 mt-12">
-                <div>
-                  <div className="text-3xl font-bold text-primary">500+</div>
-                  <div className="text-sm text-muted-foreground">компаний</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                <div className="bg-muted/50 rounded-xl p-4 border">
+                  <div className="text-2xl font-bold text-primary mb-1">Без капзатрат</div>
+                  <div className="text-sm text-muted-foreground">на разработку платформы</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">50K+</div>
-                  <div className="text-sm text-muted-foreground">сотрудников</div>
+                <div className="bg-muted/50 rounded-xl p-4 border">
+                  <div className="text-2xl font-bold text-primary mb-1">Внедрение за 1 день</div>
+                  <div className="text-sm text-muted-foreground">запуск системы</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">95%</div>
-                  <div className="text-sm text-muted-foreground">удовлетворены</div>
+                <div className="bg-muted/50 rounded-xl p-4 border">
+                  <div className="text-2xl font-bold text-primary mb-1">-70% времени</div>
+                  <div className="text-sm text-muted-foreground">на обучение новых</div>
                 </div>
               </div>
             </div>
@@ -114,25 +113,25 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="возможности" className="py-20 px-4 bg-muted/30">
+      <section id="ценности" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <Badge className="mb-4">Возможности</Badge>
-            <h2 className="text-4xl font-bold mb-4">Всё для эффективного обучения</h2>
+            <Badge className="mb-4">Ценности для бизнеса</Badge>
+            <h2 className="text-4xl font-bold mb-4">Что получит ваша компания</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Комплексная платформа с инструментами для создания, управления и аналитики обучения
+              Измеримые результаты для вашего бизнеса
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: 'Boxes', title: 'Конструктор курсов', desc: 'Создавайте интерактивные курсы с видео, тестами и заданиями' },
-              { icon: 'Users', title: 'Управление командой', desc: 'Назначайте курсы, отслеживайте прогресс сотрудников' },
-              { icon: 'BarChart3', title: 'Аналитика', desc: 'Детальные отчёты по эффективности обучения' },
-              { icon: 'Puzzle', title: 'Интеграции', desc: 'Подключение к вашим HR-системам и CRM' },
-              { icon: 'Award', title: 'Сертификаты', desc: 'Автоматическая выдача сертификатов после прохождения' },
-              { icon: 'Smartphone', title: 'Мобильное приложение', desc: 'Обучение в любое время с телефона или планшета' },
+              { icon: 'TrendingUp', title: 'Рост экспертизы', desc: 'Повышение квалификации сотрудников через системное обучение', highlight: true },
+              { icon: 'Wallet', title: 'Экономия на аттестациях', desc: 'Автоматизация процесса проверки знаний и сертификации' },
+              { icon: 'FileText', title: 'Цифровизация материалов', desc: 'Быстрое создание курсов из локальных документов и регламентов' },
+              { icon: 'ShieldCheck', title: 'Снижение ошибок', desc: 'Уменьшение потерь в операционной деятельности за счёт обучения' },
+              { icon: 'UserPlus', title: 'Быстрый онбординг', desc: 'Новые сотрудники выходят на рабочий темп в 2 раза быстрее' },
+              { icon: 'Target', title: 'Единые стандарты', desc: 'Все сотрудники работают по одним правилам и процедурам' },
             ].map((feature, idx) => (
-              <Card key={idx} className="hover:shadow-lg transition-shadow">
+              <Card key={idx} className={`hover:shadow-lg transition-shadow ${feature.highlight ? 'border-primary shadow-md' : ''}`}>
                 <CardHeader>
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                     <Icon name={feature.icon} className="text-primary" size={24} />
@@ -146,34 +145,70 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="как-работает" className="py-20 px-4">
+      <section id="возможности" className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="mb-4">Возможности</Badge>
+            <h2 className="text-4xl font-bold mb-4">Всё для эффективного обучения</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Комплексная платформа с инструментами для создания, управления и аналитики обучения
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: 'Sparkles', title: 'Генератор курсов на ИИ', desc: 'Создавайте полноценные курсы из ваших документов за минуты с помощью искусственного интеллекта', highlight: true },
+              { icon: 'Boxes', title: 'Конструктор курсов', desc: 'Создавайте интерактивные курсы с видео, тестами и заданиями' },
+              { icon: 'Users', title: 'Управление командой', desc: 'Назначайте курсы, отслеживайте прогресс сотрудников' },
+              { icon: 'BarChart3', title: 'Аналитика', desc: 'Детальные отчёты по эффективности обучения' },
+              { icon: 'Award', title: 'Сертификаты', desc: 'Автоматическая выдача сертификатов после прохождения' },
+              { icon: 'Smartphone', title: 'Мобильное приложение', desc: 'Обучение в любое время с телефона или планшета' },
+            ].map((feature, idx) => (
+              <Card key={idx} className={`hover:shadow-lg transition-shadow ${feature.highlight ? 'border-primary shadow-xl bg-gradient-to-br from-primary/5 to-secondary/5' : ''}`}>
+                <CardHeader>
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${feature.highlight ? 'bg-primary text-primary-foreground' : 'bg-primary/10 text-primary'}`}>
+                    <Icon name={feature.icon} size={24} />
+                  </div>
+                  <CardTitle className="flex items-center gap-2">
+                    {feature.title}
+                    {feature.highlight && <Badge variant="secondary" className="ml-auto">NEW</Badge>}
+                  </CardTitle>
+                  <CardDescription>{feature.desc}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="как-работает" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <Badge className="mb-4">Процесс</Badge>
             <h2 className="text-4xl font-bold mb-4">Как это работает</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Простой процесс внедрения за 4 шага
+              Простой процесс внедрения за 3 шага
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { num: '01', icon: 'MessageSquare', title: 'Консультация', desc: 'Обсуждаем ваши задачи и цели' },
-              { num: '02', icon: 'Settings', title: 'Настройка', desc: 'Адаптируем платформу под ваши процессы' },
-              { num: '03', icon: 'Upload', title: 'Загрузка', desc: 'Переносим материалы и настраиваем курсы' },
-              { num: '04', icon: 'Rocket', title: 'Запуск', desc: 'Обучаем команду и запускаем систему' },
+              { num: '01', icon: 'Search', title: 'Обследование', desc: 'Анализируем бизнес-процессы компании и определяем объёмы материалов для цифровизации. Выявляем ключевые области для обучения.' },
+              { num: '02', icon: 'Settings', title: 'Внедрение', desc: 'Брендируем платформу под ваш стиль, настраиваем систему наград и геймификации. Обучаем администраторов работе с платформой.' },
+              { num: '03', icon: 'Rocket', title: 'Запуск и поддержка', desc: 'Отлаживаем работу системы, проводим тестовые запуски. Начинаем обучение сотрудников и оказываем постоянную поддержку.' },
             ].map((step, idx) => (
-              <div key={idx} className="text-center">
-                <div className="relative mb-6">
-                  <div className="text-6xl font-bold text-primary/10 absolute -top-4 left-1/2 -translate-x-1/2">
-                    {step.num}
+              <Card key={idx} className="text-center hover:shadow-xl transition-shadow">
+                <CardHeader>
+                  <div className="relative mb-6">
+                    <div className="text-7xl font-bold text-primary/10 absolute -top-6 left-1/2 -translate-x-1/2">
+                      {step.num}
+                    </div>
+                    <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto relative z-10 shadow-lg shadow-primary/30">
+                      <Icon name={step.icon} className="text-primary-foreground" size={32} />
+                    </div>
                   </div>
-                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto relative z-10">
-                    <Icon name={step.icon} className="text-primary-foreground" size={28} />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-muted-foreground">{step.desc}</p>
-              </div>
+                  <CardTitle className="text-2xl mb-3">{step.title}</CardTitle>
+                  <CardDescription className="text-base leading-relaxed">{step.desc}</CardDescription>
+                </CardHeader>
+              </Card>
             ))}
           </div>
         </div>
@@ -394,11 +429,88 @@ const Index = () => {
         </div>
       </section>
 
+      <section id="партнёрам" className="py-20 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <Badge className="mb-4">Партнёрская программа</Badge>
+            <h2 className="text-4xl font-bold mb-4">Стать партнером</h2>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
+            <div className="space-y-6">
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Становясь нашим партнером, вы получаете возможность предлагать и распространять инновационную платформу корпоративного обучения в вашем регионе. Мы предоставляем полную поддержку на всех этапах — от обучения работе с продуктом до технической поддержки ваших клиентов.
+              </p>
+              
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Вы сможете проводить демонстрации для потенциальных клиентов, получать партнёрское вознаграждение от каждой успешной сделки и наращивать собственную экспертизу в сфере EdTech. Мы ищем амбициозных профессионалов, готовых развивать бизнес в сфере корпоративного обучения.
+              </p>
+
+              <div className="bg-muted/50 rounded-xl p-6 space-y-3 border">
+                <h3 className="font-bold text-lg mb-4">Что вы получаете:</h3>
+                {[
+                  'Партнёрское вознаграждение от продаж',
+                  'Доступ к демо-версии платформы',
+                  'Обучение и сертификация',
+                  'Маркетинговые материалы',
+                  'Техническая поддержка 24/7',
+                  'Эксклюзивные условия для партнеров',
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-3">
+                    <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center shrink-0">
+                      <Icon name="Check" className="text-primary-foreground" size={14} />
+                    </div>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Заявка на партнёрство</CardTitle>
+                <CardDescription>
+                  Оставьте контакты, и мы свяжемся с вами для обсуждения условий
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form className="space-y-4">
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Имя и фамилия *</label>
+                    <Input placeholder="Иван Иванов" required />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Город *</label>
+                    <Input placeholder="Москва" required />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Номер телефона *</label>
+                    <Input type="tel" placeholder="+7 (___) ___-__-__" required />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Email</label>
+                    <Input type="email" placeholder="email@example.com" />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium mb-2 block">Расскажите о себе</label>
+                    <Textarea placeholder="Опыт работы, сфера деятельности..." rows={3} />
+                  </div>
+                  <Button size="lg" className="w-full bg-primary hover:bg-primary/90">
+                    Отправить заявку
+                    <Icon name="Send" className="ml-2" size={18} />
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="контакты" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <Badge className="mb-4">Контакты</Badge>
-            <h2 className="text-4xl font-bold mb-4">Начните бесплатно сегодня</h2>
+            <h2 className="text-4xl font-bold mb-4">Начните сегодня</h2>
             <p className="text-xl text-muted-foreground">
               Оставьте заявку, и мы свяжемся с вами в течение часа
             </p>
