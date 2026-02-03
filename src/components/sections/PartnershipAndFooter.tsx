@@ -8,25 +8,25 @@ import Icon from '@/components/ui/icon';
 const PartnershipAndFooter = () => {
   return (
     <>
-      <section id="партнёрам" className="py-12 md:py-20 px-4">
+      <section id="партнёрам" className="py-8 md:py-20 px-4">
         <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-8 md:mb-12">
-            <Badge className="mb-3 md:mb-4">Партнёрская программа</Badge>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4">Стать партнером</h2>
+          <div className="text-center mb-6 md:mb-12">
+            <Badge className="mb-2 md:mb-4 text-xs">Партнёрская программа</Badge>
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Стать партнером</h2>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start mb-8 md:mb-12">
-            <div className="space-y-4 md:space-y-6">
-              <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-start mb-6 md:mb-12">
+            <div className="space-y-3 md:space-y-6">
+              <p className="text-sm md:text-lg leading-relaxed text-muted-foreground">
                 Становясь нашим партнером, вы получаете возможность предлагать и распространять инновационную платформу корпоративного обучения в вашем регионе. Мы предоставляем полную поддержку на всех этапах — от обучения работе с продуктом до технической поддержки ваших клиентов.
               </p>
               
-              <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
+              <p className="text-sm md:text-lg leading-relaxed text-muted-foreground">
                 Вы сможете проводить демонстрации для потенциальных клиентов, получать партнёрское вознаграждение от каждой успешной сделки и наращивать собственную экспертизу в сфере EdTech. Мы ищем амбициозных профессионалов, готовых развивать бизнес в сфере корпоративного обучения.
               </p>
 
-              <div className="bg-muted/50 rounded-xl p-4 md:p-6 space-y-3 border">
-                <h3 className="font-bold text-base md:text-lg mb-3 md:mb-4">Что вы получаете:</h3>
+              <div className="bg-muted/50 rounded-lg p-3 md:p-6 space-y-2 md:space-y-3 border">
+                <h3 className="font-bold text-sm md:text-lg mb-2 md:mb-4">Что вы получаете:</h3>
                 {[
                   'Партнёрское вознаграждение от продаж',
                   'Доступ к демо-версии платформы',
@@ -35,25 +35,25 @@ const PartnershipAndFooter = () => {
                   'Техническая поддержка 24/7',
                   'Эксклюзивные условия для партнеров',
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center shrink-0">
-                      <Icon name="Check" className="text-primary-foreground" size={14} />
+                  <div key={idx} className="flex items-center gap-2">
+                    <div className="w-4 h-4 md:w-5 md:h-5 bg-primary rounded-full flex items-center justify-center shrink-0">
+                      <Icon name="Check" className="text-primary-foreground" size={12} />
                     </div>
-                    <span>{item}</span>
+                    <span className="text-xs md:text-sm">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             <Card>
-              <CardHeader>
-                <CardTitle>Заявка на партнёрство</CardTitle>
-                <CardDescription>
+              <CardHeader className="p-4 md:p-6">
+                <CardTitle className="text-lg md:text-xl">Заявка на партнёрство</CardTitle>
+                <CardDescription className="text-sm">
                   Оставьте контакты, и мы свяжемся с вами для обсуждения условий
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <form className="space-y-4">
+              <CardContent className="p-4 md:p-6 pt-0">
+                <form className="space-y-3 md:space-y-4">
                   <div>
                     <label className="text-sm font-medium mb-2 block">Имя и фамилия *</label>
                     <Input placeholder="Иван Иванов" required />
@@ -74,9 +74,9 @@ const PartnershipAndFooter = () => {
                     <label className="text-sm font-medium mb-2 block">Расскажите о себе</label>
                     <Textarea placeholder="Опыт работы, сфера деятельности..." rows={3} />
                   </div>
-                  <Button size="lg" className="w-full bg-primary hover:bg-primary/90">
+                  <Button size="default" className="w-full bg-primary hover:bg-primary/90 text-sm">
                     Отправить заявку
-                    <Icon name="Send" className="ml-2" size={18} />
+                    <Icon name="Send" className="ml-2" size={16} />
                   </Button>
                 </form>
               </CardContent>
@@ -85,18 +85,18 @@ const PartnershipAndFooter = () => {
         </div>
       </section>
 
-      <section id="контакты" className="py-12 md:py-20 px-4 bg-muted/30">
+      <section id="контакты" className="py-8 md:py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-8 md:mb-16">
-            <Badge className="mb-3 md:mb-4">Контакты</Badge>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 px-4">Начните сегодня</h2>
-            <p className="text-base md:text-xl text-muted-foreground px-4">
+          <div className="text-center mb-6 md:mb-16">
+            <Badge className="mb-2 md:mb-4 text-xs">Контакты</Badge>
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Начните сегодня</h2>
+            <p className="text-sm md:text-xl text-muted-foreground px-4">
               Оставьте заявку, и мы свяжемся с вами в течение часа
             </p>
           </div>
           <Card>
-            <CardContent className="pt-6">
-              <form className="space-y-4">
+            <CardContent className="p-4 md:p-6">
+              <form className="space-y-3 md:space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium mb-2 block">Имя</label>
@@ -121,9 +121,9 @@ const PartnershipAndFooter = () => {
                   <label className="text-sm font-medium mb-2 block">Сообщение</label>
                   <Textarea placeholder="Расскажите о ваших задачах..." rows={4} />
                 </div>
-                <Button size="lg" className="w-full">
+                <Button size="default" className="w-full text-sm">
                   Отправить заявку
-                  <Icon name="Send" className="ml-2" size={18} />
+                  <Icon name="Send" className="ml-2" size={16} />
                 </Button>
               </form>
             </CardContent>
@@ -131,9 +131,9 @@ const PartnershipAndFooter = () => {
         </div>
       </section>
 
-      <footer className="bg-foreground text-background py-8 md:py-12 px-4">
+      <footer className="bg-foreground text-background py-6 md:py-12 px-4">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -146,8 +146,8 @@ const PartnershipAndFooter = () => {
               </p>
             </div>
             <div>
-              <h3 className="font-bold mb-4">Продукт</h3>
-              <ul className="space-y-2 text-sm text-background/70">
+              <h3 className="font-bold text-sm md:text-base mb-3 md:mb-4">Продукт</h3>
+              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-background/70">
                 <li>Возможности</li>
                 <li>Цены</li>
                 <li>Интеграции</li>
@@ -155,8 +155,8 @@ const PartnershipAndFooter = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold mb-4">Компания</h3>
-              <ul className="space-y-2 text-sm text-background/70">
+              <h3 className="font-bold text-sm md:text-base mb-3 md:mb-4">Компания</h3>
+              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-background/70">
                 <li>О нас</li>
                 <li>Блог</li>
                 <li>Карьера</li>
@@ -164,8 +164,8 @@ const PartnershipAndFooter = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold mb-4">Поддержка</h3>
-              <ul className="space-y-2 text-sm text-background/70">
+              <h3 className="font-bold text-sm md:text-base mb-3 md:mb-4">Поддержка</h3>
+              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-background/70">
                 <li>Документация</li>
                 <li>FAQ</li>
                 <li>Email: support@edu.ru</li>
@@ -173,7 +173,7 @@ const PartnershipAndFooter = () => {
               </ul>
             </div>
           </div>
-          <div className="border-t border-background/20 pt-8 text-center text-sm text-background/50">
+          <div className="border-t border-background/20 pt-4 md:pt-8 text-center text-xs md:text-sm text-background/50">
             © 2024 EduPlatform. Все права защищены.
           </div>
         </div>
