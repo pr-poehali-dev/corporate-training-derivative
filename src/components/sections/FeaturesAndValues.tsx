@@ -44,7 +44,9 @@ const FeaturesAndValues = () => {
               Измеримые результаты для вашего бизнеса
             </p>
           </div>
-          <div className="relative max-w-2xl mx-auto">
+          
+          {/* Mobile: Slider */}
+          <div className="relative md:hidden">
             <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
@@ -53,11 +55,11 @@ const FeaturesAndValues = () => {
                 {valuesData.map((feature, idx) => (
                   <div key={idx} className="w-full flex-shrink-0 px-4">
                     <Card className={`hover:shadow-lg transition-shadow ${feature.highlight ? 'border-primary shadow-md' : ''}`}>
-                      <CardHeader className="p-4 md:p-6">
-                        <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
+                      <CardHeader className="p-4">
+                        <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
                           <Icon name={feature.icon} className="text-primary" size={20} />
                         </div>
-                        <CardTitle className="text-base md:text-lg">{feature.title}</CardTitle>
+                        <CardTitle className="text-base">{feature.title}</CardTitle>
                         <CardDescription className="text-sm">{feature.desc}</CardDescription>
                       </CardHeader>
                     </Card>
@@ -68,7 +70,7 @@ const FeaturesAndValues = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-background shadow-lg"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 bg-background shadow-lg"
               onClick={() => setValuesIndex(Math.max(0, valuesIndex - 1))}
               disabled={valuesIndex === 0}
             >
@@ -77,7 +79,7 @@ const FeaturesAndValues = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-background shadow-lg"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 bg-background shadow-lg"
               onClick={() => setValuesIndex(Math.min(valuesData.length - 1, valuesIndex + 1))}
               disabled={valuesIndex === valuesData.length - 1}
             >
@@ -95,6 +97,21 @@ const FeaturesAndValues = () => {
               ))}
             </div>
           </div>
+
+          {/* Desktop: Grid */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {valuesData.map((feature, idx) => (
+              <Card key={idx} className={`hover:shadow-lg transition-shadow ${feature.highlight ? 'border-primary shadow-md' : ''}`}>
+                <CardHeader className="p-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
+                    <Icon name={feature.icon} className="text-primary" size={20} />
+                  </div>
+                  <CardTitle className="text-lg">{feature.title}</CardTitle>
+                  <CardDescription className="text-sm">{feature.desc}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -107,7 +124,9 @@ const FeaturesAndValues = () => {
               Комплексная платформа с инструментами для создания, управления и аналитики обучения
             </p>
           </div>
-          <div className="relative max-w-2xl mx-auto">
+          
+          {/* Mobile: Slider */}
+          <div className="relative md:hidden">
             <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
@@ -116,11 +135,11 @@ const FeaturesAndValues = () => {
                 {featuresData.map((feature, idx) => (
                   <div key={idx} className="w-full flex-shrink-0 px-4">
                     <Card className={`hover:shadow-lg transition-shadow ${feature.highlight ? 'border-primary shadow-xl bg-gradient-to-br from-primary/5 to-secondary/5' : ''}`}>
-                      <CardHeader className="p-4 md:p-6">
-                        <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mb-3 ${feature.highlight ? 'bg-primary text-primary-foreground' : 'bg-primary/10 text-primary'}`}>
+                      <CardHeader className="p-4">
+                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-3 ${feature.highlight ? 'bg-primary text-primary-foreground' : 'bg-primary/10 text-primary'}`}>
                           <Icon name={feature.icon} size={20} />
                         </div>
-                        <CardTitle className="flex items-center gap-2 text-base md:text-lg">
+                        <CardTitle className="flex items-center gap-2 text-base">
                           {feature.title}
                           {feature.highlight && <Badge variant="secondary" className="ml-auto text-xs">NEW</Badge>}
                         </CardTitle>
@@ -134,7 +153,7 @@ const FeaturesAndValues = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-background shadow-lg"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 bg-background shadow-lg"
               onClick={() => setFeaturesIndex(Math.max(0, featuresIndex - 1))}
               disabled={featuresIndex === 0}
             >
@@ -143,7 +162,7 @@ const FeaturesAndValues = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-background shadow-lg"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 bg-background shadow-lg"
               onClick={() => setFeaturesIndex(Math.min(featuresData.length - 1, featuresIndex + 1))}
               disabled={featuresIndex === featuresData.length - 1}
             >
@@ -161,6 +180,24 @@ const FeaturesAndValues = () => {
               ))}
             </div>
           </div>
+
+          {/* Desktop: Grid */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {featuresData.map((feature, idx) => (
+              <Card key={idx} className={`hover:shadow-lg transition-shadow ${feature.highlight ? 'border-primary shadow-xl bg-gradient-to-br from-primary/5 to-secondary/5' : ''}`}>
+                <CardHeader className="p-6">
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-3 ${feature.highlight ? 'bg-primary text-primary-foreground' : 'bg-primary/10 text-primary'}`}>
+                    <Icon name={feature.icon} size={20} />
+                  </div>
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    {feature.title}
+                    {feature.highlight && <Badge variant="secondary" className="ml-auto text-xs">NEW</Badge>}
+                  </CardTitle>
+                  <CardDescription className="text-sm">{feature.desc}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -173,7 +210,9 @@ const FeaturesAndValues = () => {
               Простой процесс внедрения за 3 шага
             </p>
           </div>
-          <div className="relative max-w-2xl mx-auto">
+          
+          {/* Mobile: Slider */}
+          <div className="relative md:hidden">
             <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
@@ -182,17 +221,17 @@ const FeaturesAndValues = () => {
                 {processData.map((step, idx) => (
                   <div key={idx} className="w-full flex-shrink-0 px-4">
                     <Card className="text-center hover:shadow-xl transition-shadow">
-                      <CardHeader className="p-4 md:p-6">
+                      <CardHeader className="p-4">
                         <div className="relative mb-4">
-                          <div className="text-5xl md:text-7xl font-bold text-primary/10 absolute -top-4 md:-top-6 left-1/2 -translate-x-1/2">
+                          <div className="text-5xl font-bold text-primary/10 absolute -top-4 left-1/2 -translate-x-1/2">
                             {step.num}
                           </div>
-                          <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto relative z-10 shadow-lg shadow-primary/30">
+                          <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto relative z-10 shadow-lg shadow-primary/30">
                             <Icon name={step.icon} className="text-primary-foreground" size={24} />
                           </div>
                         </div>
-                        <CardTitle className="text-lg md:text-2xl mb-2">{step.title}</CardTitle>
-                        <CardDescription className="text-sm md:text-base leading-relaxed">{step.desc}</CardDescription>
+                        <CardTitle className="text-lg mb-2">{step.title}</CardTitle>
+                        <CardDescription className="text-sm leading-relaxed">{step.desc}</CardDescription>
                       </CardHeader>
                     </Card>
                   </div>
@@ -202,7 +241,7 @@ const FeaturesAndValues = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-background shadow-lg"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 bg-background shadow-lg"
               onClick={() => setProcessIndex(Math.max(0, processIndex - 1))}
               disabled={processIndex === 0}
             >
@@ -211,7 +250,7 @@ const FeaturesAndValues = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-background shadow-lg"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 bg-background shadow-lg"
               onClick={() => setProcessIndex(Math.min(processData.length - 1, processIndex + 1))}
               disabled={processIndex === processData.length - 1}
             >
@@ -228,6 +267,26 @@ const FeaturesAndValues = () => {
                 />
               ))}
             </div>
+          </div>
+
+          {/* Desktop: Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {processData.map((step, idx) => (
+              <Card key={idx} className="text-center hover:shadow-xl transition-shadow">
+                <CardHeader className="p-6">
+                  <div className="relative mb-4">
+                    <div className="text-7xl font-bold text-primary/10 absolute -top-6 left-1/2 -translate-x-1/2">
+                      {step.num}
+                    </div>
+                    <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto relative z-10 shadow-lg shadow-primary/30">
+                      <Icon name={step.icon} className="text-primary-foreground" size={24} />
+                    </div>
+                  </div>
+                  <CardTitle className="text-2xl mb-2">{step.title}</CardTitle>
+                  <CardDescription className="text-base leading-relaxed">{step.desc}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

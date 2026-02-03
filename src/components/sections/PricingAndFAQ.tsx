@@ -41,23 +41,24 @@ const PricingAndFAQ = () => {
               Выберите тариф под размер вашей команды
             </p>
           </div>
-          <div className="relative max-w-6xl mx-auto">
-            <div className="overflow-hidden px-4 md:px-12">
+          
+          {/* Mobile: Slider */}
+          <div className="relative md:hidden">
+            <div className="overflow-hidden px-4">
               <div 
-                className="flex transition-transform duration-500 ease-in-out gap-4 md:gap-6"
+                className="flex transition-transform duration-500 ease-in-out gap-4"
                 style={{ 
                   transform: `translateX(calc(-${activeIndex * 100}% - ${activeIndex * 16}px))`,
                 }}
               >
                 {plans.map((plan, idx) => {
                   const isActive = idx === activeIndex;
-                  const isVisible = Math.abs(idx - activeIndex) <= 1;
                   
                   return (
                     <div 
                       key={idx} 
                       className={`flex-shrink-0 transition-all duration-500 ${
-                        isActive ? 'w-[85%] md:w-[45%] opacity-100 scale-100' : 'w-[70%] md:w-[35%] opacity-50 scale-95'
+                        isActive ? 'w-[85%] opacity-100 scale-100' : 'w-[70%] opacity-50 scale-95'
                       }`}
                       onClick={() => setActiveIndex(idx)}
                     >
@@ -69,23 +70,23 @@ const PricingAndFAQ = () => {
                             <Badge className="bg-primary text-xs">Популярный</Badge>
                           </div>
                         )}
-                        <CardHeader className="p-4 md:p-6">
-                          <CardTitle className="text-lg md:text-2xl">{plan.name}</CardTitle>
-                          <div className="text-sm md:text-base text-muted-foreground">{plan.users}</div>
-                          <div className="text-2xl md:text-4xl font-bold mt-3 md:mt-4">
+                        <CardHeader className="p-4">
+                          <CardTitle className="text-lg">{plan.name}</CardTitle>
+                          <div className="text-sm text-muted-foreground">{plan.users}</div>
+                          <div className="text-2xl font-bold mt-3">
                             {plan.price}
-                            {plan.price !== 'По запросу' && <span className="text-sm md:text-lg text-muted-foreground">/мес</span>}
+                            {plan.price !== 'По запросу' && <span className="text-sm text-muted-foreground">/мес</span>}
                           </div>
                         </CardHeader>
-                        <CardContent className="p-4 md:p-6 pt-0">
-                          <Button className="w-full mb-4 md:mb-6 text-sm" variant={plan.popular ? 'default' : 'outline'}>
+                        <CardContent className="p-4 pt-0">
+                          <Button className="w-full mb-4 text-sm" variant={plan.popular ? 'default' : 'outline'}>
                             {plan.price === 'По запросу' ? 'Связаться' : 'Начать'}
                           </Button>
-                          <ul className="space-y-2 md:space-y-3">
+                          <ul className="space-y-2">
                             {plan.features.map((feature, i) => (
                               <li key={i} className="flex items-start gap-2">
                                 <Icon name="Check" className="text-primary shrink-0 mt-0.5" size={16} />
-                                <span className="text-xs md:text-sm">{feature}</span>
+                                <span className="text-xs">{feature}</span>
                               </li>
                             ))}
                           </ul>
@@ -127,6 +128,42 @@ const PricingAndFAQ = () => {
                 />
               ))}
             </div>
+          </div>
+
+          {/* Desktop: Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {plans.map((plan, idx) => (
+              <Card key={idx} className={`h-full ${
+                plan.popular ? 'border-primary shadow-xl relative' : ''
+              }`}>
+                {plan.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                    <Badge className="bg-primary text-xs">Популярный</Badge>
+                  </div>
+                )}
+                <CardHeader className="p-6">
+                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                  <div className="text-base text-muted-foreground">{plan.users}</div>
+                  <div className="text-4xl font-bold mt-4">
+                    {plan.price}
+                    {plan.price !== 'По запросу' && <span className="text-lg text-muted-foreground">/мес</span>}
+                  </div>
+                </CardHeader>
+                <CardContent className="p-6 pt-0">
+                  <Button className="w-full mb-6 text-sm" variant={plan.popular ? 'default' : 'outline'}>
+                    {plan.price === 'По запросу' ? 'Связаться' : 'Начать'}
+                  </Button>
+                  <ul className="space-y-3">
+                    {plan.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <Icon name="Check" className="text-primary shrink-0 mt-0.5" size={16} />
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
