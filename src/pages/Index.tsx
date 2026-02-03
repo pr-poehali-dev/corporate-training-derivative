@@ -74,7 +74,7 @@ const Index = () => {
                 </div>
                 <div className="bg-muted/50 rounded-xl p-4 border">
                   <div className="text-2xl font-bold text-primary mb-1">-70% времени</div>
-                  <div className="text-sm text-muted-foreground">на обучение новых</div>
+                  <div className="text-sm text-muted-foreground">на обучение новых сотрудников</div>
                 </div>
               </div>
             </div>
