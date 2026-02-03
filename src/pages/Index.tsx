@@ -334,62 +334,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="отзывы" className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Отзывы</Badge>
-            <h2 className="text-4xl font-bold mb-4">Что говорят клиенты</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                name: 'Анна Смирнова',
-                role: 'HR-директор',
-                company: 'Tech Corp',
-                text: 'За 3 месяца повысили вовлечённость в обучение на 85%. Платформа интуитивная, сотрудники в восторге.',
-              },
-              {
-                name: 'Дмитрий Волков',
-                role: 'CEO',
-                company: 'Retail Group',
-                text: 'Окупили внедрение за полгода благодаря росту продаж. Обучили 300 сотрудников без отрыва от работы.',
-              },
-              {
-                name: 'Елена Кузнецова',
-                role: 'Head of L&D',
-                company: 'Finance Inc',
-                text: 'Техподдержка решает вопросы мгновенно. Аналитика помогла выявить слабые места в программе обучения.',
-              },
-            ].map((review, idx) => (
-              <Card key={idx}>
-                <CardHeader>
-                  <div className="flex gap-1 mb-4">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Icon key={star} name="Star" className="text-yellow-400 fill-yellow-400" size={18} />
-                    ))}
-                  </div>
-                  <CardDescription className="text-base">{review.text}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                      <Icon name="User" className="text-primary" size={20} />
-                    </div>
-                    <div>
-                      <div className="font-bold">{review.name}</div>
-                      <div className="text-sm text-muted-foreground">
-                        {review.role}, {review.company}
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" className="py-20 px-4">
+      <section id="faq" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-3xl">
           <div className="text-center mb-16">
             <Badge className="mb-4">FAQ</Badge>
