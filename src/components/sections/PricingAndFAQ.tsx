@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
@@ -5,6 +6,30 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
 const PricingAndFAQ = () => {
+  const [activeIndex, setActiveIndex] = useState(1);
+
+  const plans = [
+    {
+      name: 'Стартовый',
+      price: '19 900',
+      users: 'до 50 сотрудников',
+      features: ['Базовые курсы', 'Отчёты', 'Email поддержка', '10 GB хранилища'],
+    },
+    {
+      name: 'Профессиональный',
+      price: '49 900',
+      users: 'до 200 сотрудников',
+      popular: true,
+      features: ['Всё из Стартового', 'Кастомизация', 'Приоритетная поддержка', '100 GB хранилища', 'API доступ'],
+    },
+    {
+      name: 'Корпоративный',
+      price: 'По запросу',
+      users: 'неограниченно',
+      features: ['Всё из Профессионального', 'Dedicated менеджер', 'SLA 99.9%', 'Безлимит хранилища', 'On-premise опция'],
+    },
+  ];
+
   return (
     <>
       <section id="цены" className="py-8 md:py-20 px-4 bg-muted/30">
@@ -16,57 +41,92 @@ const PricingAndFAQ = () => {
               Выберите тариф под размер вашей команды
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                name: 'Стартовый',
-                price: '19 900',
-                users: 'до 50 сотрудников',
-                features: ['Базовые курсы', 'Отчёты', 'Email поддержка', '10 GB хранилища'],
-              },
-              {
-                name: 'Профессиональный',
-                price: '49 900',
-                users: 'до 200 сотрудников',
-                popular: true,
-                features: ['Всё из Стартового', 'Кастомизация', 'Приоритетная поддержка', '100 GB хранилища', 'API доступ'],
-              },
-              {
-                name: 'Корпоративный',
-                price: 'По запросу',
-                users: 'неограниченно',
-                features: ['Всё из Профессионального', 'Dedicated менеджер', 'SLA 99.9%', 'Безлимит хранилища', 'On-premise опция'],
-              },
-            ].map((plan, idx) => (
-              <Card key={idx} className={plan.popular ? 'border-primary shadow-xl relative' : ''}>
-                {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-primary text-xs">Популярный</Badge>
-                  </div>
-                )}
-                <CardHeader className="p-4 md:p-6">
-                  <CardTitle className="text-lg md:text-2xl">{plan.name}</CardTitle>
-                  <div className="text-sm md:text-base text-muted-foreground">{plan.users}</div>
-                  <div className="text-2xl md:text-4xl font-bold mt-3 md:mt-4">
-                    {plan.price}
-                    {plan.price !== 'По запросу' && <span className="text-sm md:text-lg text-muted-foreground">/мес</span>}
-                  </div>
-                </CardHeader>
-                <CardContent className="p-4 md:p-6 pt-0">
-                  <Button className="w-full mb-4 md:mb-6 text-sm" variant={plan.popular ? 'default' : 'outline'}>
-                    {plan.price === 'По запросу' ? 'Связаться' : 'Начать'}
-                  </Button>
-                  <ul className="space-y-2 md:space-y-3">
-                    {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <Icon name="Check" className="text-primary shrink-0 mt-0.5" size={16} />
-                        <span className="text-xs md:text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="relative max-w-6xl mx-auto">
+            <div className="overflow-hidden px-4 md:px-12">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out gap-4 md:gap-6"
+                style={{ 
+                  transform: `translateX(calc(-${activeIndex * 100}% - ${activeIndex * 16}px))`,
+                }}
+              >
+                {plans.map((plan, idx) => {
+                  const isActive = idx === activeIndex;
+                  const isVisible = Math.abs(idx - activeIndex) <= 1;
+                  
+                  return (
+                    <div 
+                      key={idx} 
+                      className={`flex-shrink-0 transition-all duration-500 ${
+                        isActive ? 'w-[85%] md:w-[45%] opacity-100 scale-100' : 'w-[70%] md:w-[35%] opacity-50 scale-95'
+                      }`}
+                      onClick={() => setActiveIndex(idx)}
+                    >
+                      <Card className={`h-full cursor-pointer hover:opacity-100 transition-opacity ${
+                        plan.popular ? 'border-primary shadow-xl relative' : ''
+                      }`}>
+                        {plan.popular && (
+                          <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                            <Badge className="bg-primary text-xs">Популярный</Badge>
+                          </div>
+                        )}
+                        <CardHeader className="p-4 md:p-6">
+                          <CardTitle className="text-lg md:text-2xl">{plan.name}</CardTitle>
+                          <div className="text-sm md:text-base text-muted-foreground">{plan.users}</div>
+                          <div className="text-2xl md:text-4xl font-bold mt-3 md:mt-4">
+                            {plan.price}
+                            {plan.price !== 'По запросу' && <span className="text-sm md:text-lg text-muted-foreground">/мес</span>}
+                          </div>
+                        </CardHeader>
+                        <CardContent className="p-4 md:p-6 pt-0">
+                          <Button className="w-full mb-4 md:mb-6 text-sm" variant={plan.popular ? 'default' : 'outline'}>
+                            {plan.price === 'По запросу' ? 'Связаться' : 'Начать'}
+                          </Button>
+                          <ul className="space-y-2 md:space-y-3">
+                            {plan.features.map((feature, i) => (
+                              <li key={i} className="flex items-start gap-2">
+                                <Icon name="Check" className="text-primary shrink-0 mt-0.5" size={16} />
+                                <span className="text-xs md:text-sm">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-background shadow-lg z-10"
+              onClick={() => setActiveIndex(Math.max(0, activeIndex - 1))}
+              disabled={activeIndex === 0}
+            >
+              <Icon name="ChevronLeft" size={20} />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-background shadow-lg z-10"
+              onClick={() => setActiveIndex(Math.min(plans.length - 1, activeIndex + 1))}
+              disabled={activeIndex === plans.length - 1}
+            >
+              <Icon name="ChevronRight" size={20} />
+            </Button>
+            
+            <div className="flex justify-center gap-2 mt-6">
+              {plans.map((_, idx) => (
+                <button
+                  key={idx}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    idx === activeIndex ? 'bg-primary' : 'bg-muted-foreground/30'
+                  }`}
+                  onClick={() => setActiveIndex(idx)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
