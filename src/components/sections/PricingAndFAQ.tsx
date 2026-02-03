@@ -43,65 +43,58 @@ const PricingAndFAQ = () => {
           </div>
           
           {/* Mobile: Slider */}
-          <div className="relative md:hidden">
-            <div className="overflow-hidden px-4">
+          <div className="relative md:hidden max-w-md mx-auto">
+            <div className="overflow-hidden">
               <div 
-                className="flex transition-transform duration-500 ease-in-out gap-4"
+                className="flex transition-transform duration-500 ease-in-out"
                 style={{ 
-                  transform: `translateX(calc(-${activeIndex * 100}% - ${activeIndex * 16}px))`,
+                  transform: `translateX(-${activeIndex * 100}%)`,
                 }}
               >
-                {plans.map((plan, idx) => {
-                  const isActive = idx === activeIndex;
-                  
-                  return (
-                    <div 
-                      key={idx} 
-                      className={`flex-shrink-0 transition-all duration-500 ${
-                        isActive ? 'w-[85%] opacity-100 scale-100' : 'w-[70%] opacity-50 scale-95'
-                      }`}
-                      onClick={() => setActiveIndex(idx)}
-                    >
-                      <Card className={`h-full cursor-pointer hover:opacity-100 transition-opacity ${
-                        plan.popular ? 'border-primary shadow-xl relative' : ''
-                      }`}>
-                        {plan.popular && (
-                          <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                            <Badge className="bg-primary text-xs">Популярный</Badge>
-                          </div>
-                        )}
-                        <CardHeader className="p-4">
-                          <CardTitle className="text-lg">{plan.name}</CardTitle>
-                          <div className="text-sm text-muted-foreground">{plan.users}</div>
-                          <div className="text-2xl font-bold mt-3">
-                            {plan.price}
-                            {plan.price !== 'По запросу' && <span className="text-sm text-muted-foreground">/мес</span>}
-                          </div>
-                        </CardHeader>
-                        <CardContent className="p-4 pt-0">
-                          <Button className="w-full mb-4 text-sm" variant={plan.popular ? 'default' : 'outline'}>
-                            {plan.price === 'По запросу' ? 'Связаться' : 'Начать'}
-                          </Button>
-                          <ul className="space-y-2">
-                            {plan.features.map((feature, i) => (
-                              <li key={i} className="flex items-start gap-2">
-                                <Icon name="Check" className="text-primary shrink-0 mt-0.5" size={16} />
-                                <span className="text-xs">{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  );
-                })}
+                {plans.map((plan, idx) => (
+                  <div 
+                    key={idx} 
+                    className="w-full flex-shrink-0 px-4"
+                  >
+                    <Card className={`h-full ${
+                      plan.popular ? 'border-primary shadow-xl relative' : ''
+                    }`}>
+                      {plan.popular && (
+                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                          <Badge className="bg-primary text-xs">Популярный</Badge>
+                        </div>
+                      )}
+                      <CardHeader className="p-4">
+                        <CardTitle className="text-lg">{plan.name}</CardTitle>
+                        <div className="text-sm text-muted-foreground">{plan.users}</div>
+                        <div className="text-2xl font-bold mt-3">
+                          {plan.price}
+                          {plan.price !== 'По запросу' && <span className="text-sm text-muted-foreground">/мес</span>}
+                        </div>
+                      </CardHeader>
+                      <CardContent className="p-4 pt-0">
+                        <Button className="w-full mb-4 text-sm" variant={plan.popular ? 'default' : 'outline'}>
+                          {plan.price === 'По запросу' ? 'Связаться' : 'Начать'}
+                        </Button>
+                        <ul className="space-y-2">
+                          {plan.features.map((feature, i) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <Icon name="Check" className="text-primary shrink-0 mt-0.5" size={16} />
+                              <span className="text-xs">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
               </div>
             </div>
             
             <Button
               variant="outline"
               size="icon"
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-background shadow-lg z-10"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 bg-background shadow-lg z-10"
               onClick={() => setActiveIndex(Math.max(0, activeIndex - 1))}
               disabled={activeIndex === 0}
             >
@@ -110,7 +103,7 @@ const PricingAndFAQ = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-background shadow-lg z-10"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 bg-background shadow-lg z-10"
               onClick={() => setActiveIndex(Math.min(plans.length - 1, activeIndex + 1))}
               disabled={activeIndex === plans.length - 1}
             >
