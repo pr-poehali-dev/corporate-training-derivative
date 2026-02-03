@@ -14,25 +14,27 @@ const FeaturesAndValues = () => {
               Измеримые результаты для вашего бизнеса
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {[
-              { icon: 'TrendingUp', title: 'Рост экспертизы', desc: 'Повышение квалификации сотрудников через системное обучение', highlight: true },
-              { icon: 'Wallet', title: 'Экономия на аттестациях', desc: 'Автоматизация процесса проверки знаний и сертификации' },
-              { icon: 'FileText', title: 'Цифровизация материалов', desc: 'Быстрое создание курсов из локальных документов и регламентов' },
-              { icon: 'ShieldCheck', title: 'Снижение ошибок', desc: 'Уменьшение потерь в операционной деятельности за счёт обучения' },
-              { icon: 'UserPlus', title: 'Быстрый онбординг', desc: 'Новые сотрудники выходят на рабочий темп в 2 раза быстрее' },
-              { icon: 'Target', title: 'Единые стандарты', desc: 'Все сотрудники работают по одним правилам и процедурам' },
-            ].map((feature, idx) => (
-              <Card key={idx} className={`hover:shadow-lg transition-shadow ${feature.highlight ? 'border-primary shadow-md' : ''}`}>
-                <CardHeader>
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                    <Icon name={feature.icon} className="text-primary" size={24} />
-                  </div>
-                  <CardTitle>{feature.title}</CardTitle>
-                  <CardDescription>{feature.desc}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
+          <div className="overflow-x-auto pb-4 -mx-4 px-4">
+            <div className="flex gap-4 md:gap-6 min-w-max">
+              {[
+                { icon: 'TrendingUp', title: 'Рост экспертизы', desc: 'Повышение квалификации сотрудников через системное обучение', highlight: true },
+                { icon: 'Wallet', title: 'Экономия на аттестациях', desc: 'Автоматизация процесса проверки знаний и сертификации' },
+                { icon: 'FileText', title: 'Цифровизация материалов', desc: 'Быстрое создание курсов из локальных документов и регламентов' },
+                { icon: 'ShieldCheck', title: 'Снижение ошибок', desc: 'Уменьшение потерь в операционной деятельности за счёт обучения' },
+                { icon: 'UserPlus', title: 'Быстрый онбординг', desc: 'Новые сотрудники выходят на рабочий темп в 2 раза быстрее' },
+                { icon: 'Target', title: 'Единые стандарты', desc: 'Все сотрудники работают по одним правилам и процедурам' },
+              ].map((feature, idx) => (
+                <Card key={idx} className={`hover:shadow-lg transition-shadow w-[280px] md:w-[320px] flex-shrink-0 ${feature.highlight ? 'border-primary shadow-md' : ''}`}>
+                  <CardHeader>
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                      <Icon name={feature.icon} className="text-primary" size={24} />
+                    </div>
+                    <CardTitle>{feature.title}</CardTitle>
+                    <CardDescription>{feature.desc}</CardDescription>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -46,28 +48,30 @@ const FeaturesAndValues = () => {
               Комплексная платформа с инструментами для создания, управления и аналитики обучения
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {[
-              { icon: 'Sparkles', title: 'Генератор курсов на ИИ', desc: 'Создавайте полноценные курсы из ваших документов за минуты с помощью искусственного интеллекта', highlight: true },
-              { icon: 'Boxes', title: 'Конструктор курсов', desc: 'Создавайте интерактивные курсы с видео, тестами и заданиями' },
-              { icon: 'Users', title: 'Управление командой', desc: 'Назначайте курсы, отслеживайте прогресс сотрудников' },
-              { icon: 'BarChart3', title: 'Аналитика', desc: 'Детальные отчёты по эффективности обучения' },
-              { icon: 'Award', title: 'Сертификаты', desc: 'Автоматическая выдача сертификатов после прохождения' },
-              { icon: 'Smartphone', title: 'Мобильное приложение', desc: 'Обучение в любое время с телефона или планшета' },
-            ].map((feature, idx) => (
-              <Card key={idx} className={`hover:shadow-lg transition-shadow ${feature.highlight ? 'border-primary shadow-xl bg-gradient-to-br from-primary/5 to-secondary/5' : ''}`}>
-                <CardHeader>
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${feature.highlight ? 'bg-primary text-primary-foreground' : 'bg-primary/10 text-primary'}`}>
-                    <Icon name={feature.icon} size={24} />
-                  </div>
-                  <CardTitle className="flex items-center gap-2">
-                    {feature.title}
-                    {feature.highlight && <Badge variant="secondary" className="ml-auto">NEW</Badge>}
-                  </CardTitle>
-                  <CardDescription>{feature.desc}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
+          <div className="overflow-x-auto pb-4 -mx-4 px-4">
+            <div className="flex gap-4 md:gap-6 min-w-max">
+              {[
+                { icon: 'Sparkles', title: 'Генератор курсов на ИИ', desc: 'Создавайте полноценные курсы из ваших документов за минуты с помощью искусственного интеллекта', highlight: true },
+                { icon: 'Boxes', title: 'Конструктор курсов', desc: 'Создавайте интерактивные курсы с видео, тестами и заданиями' },
+                { icon: 'Users', title: 'Управление командой', desc: 'Назначайте курсы, отслеживайте прогресс сотрудников' },
+                { icon: 'BarChart3', title: 'Аналитика', desc: 'Детальные отчёты по эффективности обучения' },
+                { icon: 'Award', title: 'Сертификаты', desc: 'Автоматическая выдача сертификатов после прохождения' },
+                { icon: 'Smartphone', title: 'Мобильное приложение', desc: 'Обучение в любое время с телефона или планшета' },
+              ].map((feature, idx) => (
+                <Card key={idx} className={`hover:shadow-lg transition-shadow w-[280px] md:w-[320px] flex-shrink-0 ${feature.highlight ? 'border-primary shadow-xl bg-gradient-to-br from-primary/5 to-secondary/5' : ''}`}>
+                  <CardHeader>
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${feature.highlight ? 'bg-primary text-primary-foreground' : 'bg-primary/10 text-primary'}`}>
+                      <Icon name={feature.icon} size={24} />
+                    </div>
+                    <CardTitle className="flex items-center gap-2">
+                      {feature.title}
+                      {feature.highlight && <Badge variant="secondary" className="ml-auto">NEW</Badge>}
+                    </CardTitle>
+                    <CardDescription>{feature.desc}</CardDescription>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -81,27 +85,29 @@ const FeaturesAndValues = () => {
               Простой процесс внедрения за 3 шага
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
-            {[
-              { num: '01', icon: 'Search', title: 'Обследование', desc: 'Анализируем бизнес-процессы компании и определяем объёмы материалов для цифровизации. Выявляем ключевые области для обучения.' },
-              { num: '02', icon: 'Settings', title: 'Внедрение', desc: 'Брендируем платформу под ваш стиль, настраиваем систему наград и геймификации. Обучаем администраторов работе с платформой.' },
-              { num: '03', icon: 'Rocket', title: 'Запуск и поддержка', desc: 'Отлаживаем работу системы, проводим тестовые запуски. Начинаем обучение сотрудников и оказываем постоянную поддержку.' },
-            ].map((step, idx) => (
-              <Card key={idx} className="text-center hover:shadow-xl transition-shadow">
-                <CardHeader>
-                  <div className="relative mb-6">
-                    <div className="text-7xl font-bold text-primary/10 absolute -top-6 left-1/2 -translate-x-1/2">
-                      {step.num}
+          <div className="overflow-x-auto pb-4 -mx-4 px-4">
+            <div className="flex gap-6 md:gap-8 min-w-max mx-auto">
+              {[
+                { num: '01', icon: 'Search', title: 'Обследование', desc: 'Анализируем бизнес-процессы компании и определяем объёмы материалов для цифровизации. Выявляем ключевые области для обучения.' },
+                { num: '02', icon: 'Settings', title: 'Внедрение', desc: 'Брендируем платформу под ваш стиль, настраиваем систему наград и геймификации. Обучаем администраторов работе с платформой.' },
+                { num: '03', icon: 'Rocket', title: 'Запуск и поддержка', desc: 'Отлаживаем работу системы, проводим тестовые запуски. Начинаем обучение сотрудников и оказываем постоянную поддержку.' },
+              ].map((step, idx) => (
+                <Card key={idx} className="text-center hover:shadow-xl transition-shadow w-[320px] md:w-[380px] flex-shrink-0">
+                  <CardHeader>
+                    <div className="relative mb-6">
+                      <div className="text-7xl font-bold text-primary/10 absolute -top-6 left-1/2 -translate-x-1/2">
+                        {step.num}
+                      </div>
+                      <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto relative z-10 shadow-lg shadow-primary/30">
+                        <Icon name={step.icon} className="text-primary-foreground" size={32} />
+                      </div>
                     </div>
-                    <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto relative z-10 shadow-lg shadow-primary/30">
-                      <Icon name={step.icon} className="text-primary-foreground" size={32} />
-                    </div>
-                  </div>
-                  <CardTitle className="text-2xl mb-3">{step.title}</CardTitle>
-                  <CardDescription className="text-base leading-relaxed">{step.desc}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
+                    <CardTitle className="text-2xl mb-3">{step.title}</CardTitle>
+                    <CardDescription className="text-base leading-relaxed">{step.desc}</CardDescription>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
