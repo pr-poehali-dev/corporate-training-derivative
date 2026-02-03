@@ -69,8 +69,8 @@ const Index = () => {
                   <div className="text-sm text-muted-foreground">на разработку платформы</div>
                 </div>
                 <div className="bg-muted/50 rounded-xl p-4 border">
-                  <div className="text-2xl font-bold text-primary mb-1">Внедрение за 1 день</div>
-                  <div className="text-sm text-muted-foreground">запуск системы</div>
+                  <div className="text-2xl font-bold text-primary mb-1">Быстрый запуск</div>
+                  <div className="text-sm text-muted-foreground">внедрение системы за 1 день</div>
                 </div>
                 <div className="bg-muted/50 rounded-xl p-4 border">
                   <div className="text-2xl font-bold text-primary mb-1">-70% времени</div>
