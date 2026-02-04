@@ -19,9 +19,20 @@ const HeroSection = () => {
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-6 leading-tight">
               Корпоративная обучающая платформа
             </h1>
-            <p className="text-sm sm:text-base md:text-xl text-muted-foreground mb-4 md:mb-8">
-              Повышайте экспертизу сотрудников, экономьте на аттестациях и сокращайте ошибки в работе. Быстрый онбординг новичков и цифровизация локальных документов.
-            </p>
+            <ul className="text-sm sm:text-base md:text-xl text-muted-foreground mb-4 md:mb-8 space-y-2 list-none">
+              <li className="flex items-start gap-2">
+                <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                <span>Систематизируйте и развивайте корпоративные знания</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                <span>Генерируйте увлекательные уроки и курсы даже по самым скучным регламентам</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                <span>Повышайте качество онбординга новых работников и аттестаций</span>
+              </li>
+            </ul>
             <div className="flex flex-wrap gap-2 md:gap-4 justify-center lg:justify-start">
               <Button 
                 size="default" 
