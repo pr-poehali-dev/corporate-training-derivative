@@ -223,10 +223,10 @@ const FeaturesAndValues = () => {
                     <Card className="text-center hover:shadow-xl transition-shadow">
                       <CardHeader className="p-4">
                         <div className="relative mb-4">
-                          <div className="text-5xl font-bold text-primary/10 absolute -top-4 left-1/2 -translate-x-1/2">
+                          <div className="text-5xl font-bold text-primary/20 absolute -top-6 left-1/2 -translate-x-1/2 z-0">
                             {step.num}
                           </div>
-                          <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto relative z-10 shadow-lg shadow-primary/30">
+                          <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto relative z-20 shadow-lg shadow-primary/30">
                             <Icon name={step.icon} className="text-primary-foreground" size={24} />
                           </div>
                         </div>
@@ -275,10 +275,10 @@ const FeaturesAndValues = () => {
               <Card key={idx} className="text-center hover:shadow-xl transition-shadow">
                 <CardHeader className="p-6">
                   <div className="relative mb-4">
-                    <div className="text-7xl font-bold text-primary/10 absolute -top-6 left-1/2 -translate-x-1/2">
+                    <div className="text-7xl font-bold text-primary/20 absolute -top-8 left-1/2 -translate-x-1/2 z-0">
                       {step.num}
                     </div>
-                    <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto relative z-10 shadow-lg shadow-primary/30">
+                    <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto relative z-20 shadow-lg shadow-primary/30">
                       <Icon name={step.icon} className="text-primary-foreground" size={24} />
                     </div>
                   </div>
