@@ -14,7 +14,7 @@ const HeroSection = () => {
     <section id="главная" className="pt-20 md:pt-32 pb-8 md:pb-20 px-4">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
-          <div className="animate-fade-in text-center lg:text-left">
+          <div className="animate-fade-in text-left">
             <Badge className="mb-2 md:mb-4 text-xs" variant="secondary">KOP</Badge>
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-6 leading-tight">
               Корпоративная обучающая платформа
@@ -42,7 +42,7 @@ const HeroSection = () => {
                 </div>
               </li>
             </ul>
-            <div className="flex flex-wrap gap-2 md:gap-4 justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-2 md:gap-4 justify-start">
               <Button 
                 size="default" 
                 className="text-sm md:text-lg px-4 md:px-8 bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30"
