@@ -75,8 +75,8 @@ const Index = () => {
       </nav>
 
       <HeroSection />
-      <UseCases />
       <FeaturesAndValues />
+      <UseCases />
       <PricingAndFAQ />
       <PartnershipAndFooter />
     </div>
