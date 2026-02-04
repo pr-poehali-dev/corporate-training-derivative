@@ -3,6 +3,13 @@ import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 
 const HeroSection = () => {
+  const scrollToDemo = () => {
+    const demoSection = document.getElementById('демо');
+    if (demoSection) {
+      demoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section id="главная" className="pt-20 md:pt-32 pb-8 md:pb-20 px-4">
       <div className="container mx-auto">
@@ -16,7 +23,11 @@ const HeroSection = () => {
               Повышайте экспертизу сотрудников, экономьте на аттестациях и сокращайте ошибки в работе. Быстрый онбординг новичков и цифровизация локальных документов.
             </p>
             <div className="flex flex-wrap gap-2 md:gap-4 justify-center lg:justify-start">
-              <Button size="default" className="text-sm md:text-lg px-4 md:px-8 bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30">
+              <Button 
+                size="default" 
+                className="text-sm md:text-lg px-4 md:px-8 bg-primary hover:bg-primary/90 shadow-xl shadow-primary/30"
+                onClick={scrollToDemo}
+              >
                 <Icon name="Play" className="mr-2" size={16} />
                 Смотреть демо
               </Button>

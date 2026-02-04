@@ -10,6 +10,13 @@ import Icon from '@/components/ui/icon';
 const PricingAndFAQ = () => {
   const [activeIndex, setActiveIndex] = useState(1);
 
+  const scrollToDemo = () => {
+    const demoSection = document.getElementById('демо');
+    if (demoSection) {
+      demoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const plans = [
     {
       name: 'Стартовый',
@@ -75,7 +82,11 @@ const PricingAndFAQ = () => {
                         </div>
                       </CardHeader>
                       <CardContent className="p-4 pt-0">
-                        <Button className="w-full mb-4 text-sm" variant={plan.popular ? 'default' : 'outline'}>
+                        <Button 
+                          className="w-full mb-4 text-sm" 
+                          variant={plan.popular ? 'default' : 'outline'}
+                          onClick={scrollToDemo}
+                        >
                           {plan.price === 'По запросу' ? 'Связаться' : 'Начать'}
                         </Button>
                         <ul className="space-y-2">
@@ -145,7 +156,11 @@ const PricingAndFAQ = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="p-6 pt-0">
-                  <Button className="w-full mb-6 text-sm" variant={plan.popular ? 'default' : 'outline'}>
+                  <Button 
+                    className="w-full mb-6 text-sm" 
+                    variant={plan.popular ? 'default' : 'outline'}
+                    onClick={scrollToDemo}
+                  >
                     {plan.price === 'По запросу' ? 'Связаться' : 'Начать'}
                   </Button>
                   <ul className="space-y-3">
