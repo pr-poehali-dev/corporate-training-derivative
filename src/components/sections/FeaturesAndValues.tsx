@@ -26,9 +26,9 @@ const FeaturesAndValues = () => {
   ];
 
   const processData = [
-    { num: '01', icon: 'Search', title: 'Обследование', desc: 'Анализируем бизнес-процессы компании и определяем объёмы материалов для цифровизации. Выявляем ключевые области для обучения.' },
-    { num: '02', icon: 'Settings', title: 'Внедрение', desc: 'Брендируем платформу под ваш стиль, настраиваем систему наград и геймификации. Обучаем администраторов работе с платформой.' },
-    { num: '03', icon: 'Rocket', title: 'Запуск и поддержка', desc: 'Отлаживаем работу системы, проводим тестовые запуски. Начинаем обучение сотрудников и оказываем постоянную поддержку.' },
+    { num: '01', icon: 'MessageSquare', title: 'Оставьте заявку', desc: 'Оставьте заявку на показ решения и обсуждения ваших корпоративных задач и вызовов' },
+    { num: '02', icon: 'Rocket', title: 'Пилотирование', desc: 'Внедрение бесплатной версии продукта, брендирование и пилотирование' },
+    { num: '03', icon: 'FileCheck', title: 'Заключение договора', desc: 'Заключение договора и оплата продукта по выбранному тарифу' },
   ];
 
   return (
@@ -202,11 +202,7 @@ const FeaturesAndValues = () => {
       <section id="как-работает" className="py-8 md:py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-6 md:mb-16">
-            <Badge className="mb-2 md:mb-4 text-xs">Процесс</Badge>
-            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Как это работает</h2>
-            <p className="text-sm md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-              Простой процесс внедрения за 3 шага
-            </p>
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Как начать работать</h2>
           </div>
           
           {/* Mobile: Slider */}
