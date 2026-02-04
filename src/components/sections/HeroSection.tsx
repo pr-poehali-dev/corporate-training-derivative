@@ -54,13 +54,16 @@ const HeroSection = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 mt-6 md:mt-12">
               <div className="bg-primary/10 rounded-lg p-3 md:p-4 border-2 border-primary/20 hover:border-primary/40 transition-colors">
-                <div className="text-xs md:text-sm text-foreground leading-relaxed"><span className="font-semibold text-primary">Брендирование</span> и гибкая настройка интерфейса</div>
+                <div className="text-base md:text-lg font-bold text-primary mb-1">Брендирование</div>
+                <div className="text-xs md:text-sm text-muted-foreground">и гибкая настройка интерфейса</div>
               </div>
               <div className="bg-primary/10 rounded-lg p-3 md:p-4 border-2 border-primary/20 hover:border-primary/40 transition-colors">
-                <div className="text-xs md:text-sm text-foreground leading-relaxed"><span className="font-semibold text-primary">Отсутствие капитальных затрат</span> на внедрение и обслуживание</div>
+                <div className="text-base md:text-lg font-bold text-primary mb-1">Отсутствие капзатрат</div>
+                <div className="text-xs md:text-sm text-muted-foreground">на внедрение и обслуживание</div>
               </div>
               <div className="bg-primary/10 rounded-lg p-3 md:p-4 border-2 border-primary/20 hover:border-primary/40 transition-colors">
-                <div className="text-xs md:text-sm text-foreground leading-relaxed"><span className="font-semibold text-primary">Помощь в организации</span> закупки, внедрении и обучении</div>
+                <div className="text-base md:text-lg font-bold text-primary mb-1">Помощь в организации</div>
+                <div className="text-xs md:text-sm text-muted-foreground">закупки, внедрении и обучении</div>
               </div>
             </div>
           </div>
