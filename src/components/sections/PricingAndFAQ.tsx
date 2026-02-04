@@ -52,7 +52,7 @@ const PricingAndFAQ = () => {
           </div>
           
           {/* Mobile: Slider */}
-          <div className="relative md:hidden px-3 pt-4">
+          <div className="relative md:hidden px-3">
             <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
@@ -66,13 +66,8 @@ const PricingAndFAQ = () => {
                     className="w-full flex-shrink-0 px-1"
                   >
                     <Card className={`h-full ${
-                      plan.popular ? 'border-primary shadow-xl relative' : ''
+                      plan.popular ? 'border-primary shadow-xl' : ''
                     }`}>
-                      {plan.popular && (
-                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                          <Badge className="bg-primary text-xs px-3 py-1">Популярный</Badge>
-                        </div>
-                      )}
                       <CardHeader className="p-5">
                         <CardTitle className="text-xl">{plan.name}</CardTitle>
                         <div className="text-sm text-muted-foreground mt-1">{plan.users}</div>
@@ -140,13 +135,8 @@ const PricingAndFAQ = () => {
           <div className="hidden md:grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {plans.map((plan, idx) => (
               <Card key={idx} className={`h-full ${
-                plan.popular ? 'border-primary shadow-xl relative' : ''
+                plan.popular ? 'border-primary shadow-xl' : ''
               }`}>
-                {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                    <Badge className="bg-primary text-xs">Популярный</Badge>
-                  </div>
-                )}
                 <CardHeader className="p-6">
                   <CardTitle className="text-2xl">{plan.name}</CardTitle>
                   <div className="text-base text-muted-foreground">{plan.users}</div>
