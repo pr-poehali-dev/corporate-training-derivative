@@ -52,7 +52,7 @@ const PricingAndFAQ = () => {
           </div>
           
           {/* Mobile: Slider */}
-          <div className="relative md:hidden px-3">
+          <div className="relative md:hidden px-3 pt-4">
             <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
