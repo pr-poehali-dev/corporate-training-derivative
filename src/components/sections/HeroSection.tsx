@@ -45,16 +45,13 @@ const HeroSection = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 mt-6 md:mt-12">
               <div className="bg-muted/50 rounded-lg p-3 md:p-4 border">
-                <div className="text-lg md:text-2xl font-bold text-primary mb-0.5">Без капзатрат</div>
-                <div className="text-xs md:text-sm text-muted-foreground">на разработку платформы</div>
+                <div className="text-xs md:text-sm text-muted-foreground leading-relaxed">Брендирование и гибкая настройка интерфейса</div>
               </div>
               <div className="bg-muted/50 rounded-lg p-3 md:p-4 border">
-                <div className="text-lg md:text-2xl font-bold text-primary mb-0.5">Быстрый запуск</div>
-                <div className="text-xs md:text-sm text-muted-foreground">внедрение системы за 2 недели</div>
+                <div className="text-xs md:text-sm text-muted-foreground leading-relaxed">Отсутствие капитальных затрат на внедрение и обслуживание</div>
               </div>
               <div className="bg-muted/50 rounded-lg p-3 md:p-4 border">
-                <div className="text-lg md:text-2xl font-bold text-primary mb-0.5">-70% времени</div>
-                <div className="text-xs md:text-sm text-muted-foreground">на обучение новых сотрудников</div>
+                <div className="text-xs md:text-sm text-muted-foreground leading-relaxed">Помощь в организации закупки, внедрении и обучении</div>
               </div>
             </div>
           </div>
