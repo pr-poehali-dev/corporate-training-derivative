@@ -80,54 +80,6 @@ const PartnershipAndFooter = () => {
           </div>
         </div>
       </section>
-
-      <footer className="bg-foreground text-background py-6 md:py-12 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <Icon name="GraduationCap" className="text-primary-foreground" size={20} />
-                </div>
-                <span className="font-bold text-lg">EduPlatform</span>
-              </div>
-              <p className="text-sm text-background/70">
-                Корпоративное обучение нового поколения
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-sm md:text-base mb-3 md:mb-4">Продукт</h3>
-              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-background/70">
-                <li>Возможности</li>
-                <li>Цены</li>
-                <li>Интеграции</li>
-                <li>Безопасность</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-sm md:text-base mb-3 md:mb-4">Компания</h3>
-              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-background/70">
-                <li>О нас</li>
-                <li>Блог</li>
-                <li>Карьера</li>
-                <li>Контакты</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-sm md:text-base mb-3 md:mb-4">Поддержка</h3>
-              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm text-background/70">
-                <li>Документация</li>
-                <li>FAQ</li>
-                <li>Email: support@edu.ru</li>
-                <li>Тел: +7 (495) 123-45-67</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-background/20 pt-4 md:pt-8 text-center text-xs md:text-sm text-background/50">
-            © 2024 EduPlatform. Все права защищены.
-          </div>
-        </div>
-      </footer>
     </>
   );
 };
