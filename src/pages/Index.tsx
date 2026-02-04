@@ -16,7 +16,9 @@ const Index = () => {
 
   const scrollToSection = (id: string) => {
     setActiveNav(id);
-    const element = document.getElementById(id);
+    let sectionId = id.toLowerCase();
+    if (sectionId === 'как начать') sectionId = 'как-работает';
+    const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
     setMobileMenuOpen(false);
   };
@@ -33,7 +35,7 @@ const Index = () => {
               <span className="text-lg md:text-xl font-bold">KOP</span>
             </div>
             <div className="hidden md:flex items-center gap-6">
-              {['Главная', 'Возможности', 'Преимущества', 'Кейсы', 'Цены', 'Партнёрам'].map((item) => (
+              {['Главная', 'Ценности', 'Возможности', 'Кейсы', 'Как начать', 'Преимущества', 'Цены', 'FAQ', 'Партнёрам'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -59,7 +61,7 @@ const Index = () => {
         {mobileMenuOpen && (
           <div className="md:hidden bg-background border-t animate-fade-in">
             <div className="container mx-auto px-4 py-4 space-y-3">
-              {['Главная', 'Возможности', 'Преимущества', 'Кейсы', 'Цены', 'Партнёрам'].map((item) => (
+              {['Главная', 'Ценности', 'Возможности', 'Кейсы', 'Как начать', 'Преимущества', 'Цены', 'FAQ', 'Партнёрам'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
