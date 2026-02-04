@@ -39,7 +39,7 @@ const HeroSection = () => {
               </div>
               <div className="bg-muted/50 rounded-lg p-3 md:p-4 border">
                 <div className="text-lg md:text-2xl font-bold text-primary mb-0.5">Быстрый запуск</div>
-                <div className="text-xs md:text-sm text-muted-foreground">внедрение системы за 1 день</div>
+                <div className="text-xs md:text-sm text-muted-foreground">внедрение системы за 2 недели</div>
               </div>
               <div className="bg-muted/50 rounded-lg p-3 md:p-4 border">
                 <div className="text-lg md:text-2xl font-bold text-primary mb-0.5">-70% времени</div>
