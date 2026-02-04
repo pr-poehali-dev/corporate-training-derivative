@@ -43,7 +43,7 @@ const Index = () => {
                 </button>
               ))}
             </div>
-            <Button className="hidden md:flex bg-primary hover:bg-primary/90 shadow-lg shadow-primary/30">
+            <Button className="hidden md:flex bg-primary hover:bg-primary/90 shadow-lg shadow-primary/30" onClick={() => scrollToSection('демо')}>
               <Icon name="Play" className="mr-2" size={18} />
               Смотреть демо
             </Button>
@@ -68,7 +68,7 @@ const Index = () => {
                   {item}
                 </button>
               ))}
-              <Button className="w-full bg-primary hover:bg-primary/90 shadow-lg shadow-primary/30" onClick={() => setMobileMenuOpen(false)}>
+              <Button className="w-full bg-primary hover:bg-primary/90 shadow-lg shadow-primary/30" onClick={() => scrollToSection('демо')}>
                 <Icon name="Play" className="mr-2" size={18} />
                 Смотреть демо
               </Button>
