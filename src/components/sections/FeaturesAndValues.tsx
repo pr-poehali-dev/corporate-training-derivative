@@ -10,12 +10,10 @@ const FeaturesAndValues = () => {
   const [processIndex, setProcessIndex] = useState(0);
 
   const valuesData = [
-    { icon: 'TrendingUp', title: 'Рост экспертизы', desc: 'Повышение квалификации сотрудников через системное обучение', highlight: true },
-    { icon: 'Wallet', title: 'Экономия на аттестациях', desc: 'Автоматизация процесса проверки знаний и сертификации' },
-    { icon: 'FileText', title: 'Цифровизация материалов', desc: 'Быстрое создание курсов из локальных документов и регламентов' },
-    { icon: 'ShieldCheck', title: 'Снижение ошибок', desc: 'Уменьшение потерь в операционной деятельности за счёт обучения' },
-    { icon: 'UserPlus', title: 'Быстрый онбординг', desc: 'Новые сотрудники выходят на рабочий темп в 2 раза быстрее' },
-    { icon: 'Target', title: 'Единые стандарты', desc: 'Все сотрудники работают по одним правилам и процедурам' },
+    { icon: 'Sparkles', title: 'Автоматическое создание курсов', desc: 'Автоматическое создание увлекательных уроков и тестов с помощью AI и простого конструктора по загруженным документам', highlight: true },
+    { icon: 'ShieldCheck', title: 'Снижение ошибок и потерь', desc: 'Снижение ошибок, аварий и потерь из-за низкой квалификации кадров' },
+    { icon: 'Gamepad2', title: 'Геймификация обучения', desc: 'Снижение внутреннего сопротивления сотрудников к обучению за счет геймофикации и цифровых наград' },
+    { icon: 'TrendingUp', title: 'Рост корпоративной культуры', desc: 'Повышение уровня корпоративной культуры и стандартов, сокращение сроков по адаптации новых специалистов' },
   ];
 
   const featuresData = [
@@ -99,7 +97,7 @@ const FeaturesAndValues = () => {
           </div>
 
           {/* Desktop: Grid */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {valuesData.map((feature, idx) => (
               <Card key={idx} className={`hover:shadow-lg transition-shadow ${feature.highlight ? 'border-primary shadow-md' : ''}`}>
                 <CardHeader className="p-6">
