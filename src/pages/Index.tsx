@@ -2,8 +2,11 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import HeroSection from '@/components/sections/HeroSection';
-import FeaturesAndValues from '@/components/sections/FeaturesAndValues';
+import Values from '@/components/sections/Values';
+import Features from '@/components/sections/Features';
 import UseCases from '@/components/sections/UseCases';
+import HowToStart from '@/components/sections/HowToStart';
+import Advantages from '@/components/sections/Advantages';
 import PricingAndFAQ from '@/components/sections/PricingAndFAQ';
 import PartnershipAndFooter from '@/components/sections/PartnershipAndFooter';
 
@@ -75,8 +78,11 @@ const Index = () => {
       </nav>
 
       <HeroSection />
-      <FeaturesAndValues />
+      <Values />
+      <Features />
       <UseCases />
+      <HowToStart />
+      <Advantages />
       <PricingAndFAQ />
       <PartnershipAndFooter />
     </div>
