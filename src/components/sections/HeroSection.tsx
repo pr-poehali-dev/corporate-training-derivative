@@ -15,9 +15,9 @@ const HeroSection = () => {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
           <div className="animate-fade-in text-center lg:text-left">
-            <Badge className="mb-2 md:mb-4 text-xs" variant="secondary">Корпоративное обучение</Badge>
+            <Badge className="mb-2 md:mb-4 text-xs" variant="secondary">KOP</Badge>
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-6 leading-tight">
-              Система обучения под вашу компанию
+              Корпоративная обучающая платформа
             </h1>
             <p className="text-sm sm:text-base md:text-xl text-muted-foreground mb-4 md:mb-8">
               Повышайте экспертизу сотрудников, экономьте на аттестациях и сокращайте ошибки в работе. Быстрый онбординг новичков и цифровизация локальных документов.
