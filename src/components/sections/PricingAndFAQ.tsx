@@ -8,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 
 const PricingAndFAQ = () => {
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const scrollToDemo = () => {
     const demoSection = document.getElementById('демо');
@@ -19,23 +19,35 @@ const PricingAndFAQ = () => {
 
   const plans = [
     {
-      name: 'Стартовый',
-      price: '19 900',
-      users: 'до 50 сотрудников',
-      features: ['Базовые курсы', 'Отчёты', 'Email поддержка', '10 GB хранилища'],
-    },
-    {
-      name: 'Профессиональный',
-      price: '49 900',
-      users: 'до 200 сотрудников',
+      name: 'Облачный',
+      price: '29 000',
+      users: 'размещение на серверах Yandex Cloud',
       popular: true,
-      features: ['Всё из Стартового', 'Кастомизация', 'Приоритетная поддержка', '100 GB хранилища', 'API доступ'],
+      features: [
+        'Автоматическое создание курсов с помощью AI',
+        'Конструктор курсов и тестов',
+        'Геймификация и система наград',
+        'Аналитика и отчёты по обучению',
+        'Брендирование под ваш стиль',
+        'Мобильное приложение',
+        'Техническая поддержка 24/7',
+        'Автоматические обновления',
+      ],
     },
     {
-      name: 'Корпоративный',
-      price: 'По запросу',
-      users: 'неограниченно',
-      features: ['Всё из Профессионального', 'Dedicated менеджер', 'SLA 99.9%', 'Безлимит хранилища', 'On-premise опция'],
+      name: 'On-premise',
+      price: '88 000',
+      users: 'размещение на ваших серверах',
+      features: [
+        'Все возможности облачной версии',
+        'Полный контроль над данными',
+        'Развертывание на ваших серверах',
+        'Интеграция с корпоративными системами',
+        'Персональный менеджер проекта',
+        'SLA 99.9% с гарантией',
+        'Приоритетная техподдержка',
+        'Кастомизация под ваши процессы',
+      ],
     },
   ];
 
@@ -132,7 +144,7 @@ const PricingAndFAQ = () => {
           </div>
 
           {/* Desktop: Grid */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="hidden md:grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {plans.map((plan, idx) => (
               <Card key={idx} className={`h-full ${
                 plan.popular ? 'border-primary shadow-xl' : ''
