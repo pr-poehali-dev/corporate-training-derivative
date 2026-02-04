@@ -19,18 +19,27 @@ const HeroSection = () => {
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-6 leading-tight">
               Корпоративная обучающая платформа
             </h1>
-            <ul className="text-sm sm:text-base md:text-xl text-muted-foreground mb-4 md:mb-8 space-y-2 list-none">
-              <li className="flex items-start gap-2">
+            <ul className="mb-4 md:mb-8 space-y-3 md:space-y-4 list-none">
+              <li className="flex items-start gap-2 md:gap-3">
                 <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                <span>Систематизируйте и развивайте корпоративные знания</span>
+                <div>
+                  <div className="text-base sm:text-lg md:text-2xl font-bold text-foreground">Систематизируйте и развивайте</div>
+                  <div className="text-sm sm:text-base md:text-lg text-muted-foreground">корпоративные знания</div>
+                </div>
               </li>
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-2 md:gap-3">
                 <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                <span>Генерируйте увлекательные уроки и курсы даже по самым скучным регламентам</span>
+                <div>
+                  <div className="text-base sm:text-lg md:text-2xl font-bold text-foreground">Генерируйте увлекательные уроки и курсы</div>
+                  <div className="text-sm sm:text-base md:text-lg text-muted-foreground">даже по самым скучным регламентам</div>
+                </div>
               </li>
-              <li className="flex items-start gap-2">
+              <li className="flex items-start gap-2 md:gap-3">
                 <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
-                <span>Повышайте качество онбординга новых работников и аттестаций</span>
+                <div>
+                  <div className="text-base sm:text-lg md:text-2xl font-bold text-foreground">Повышайте качество онбординга</div>
+                  <div className="text-sm sm:text-base md:text-lg text-muted-foreground">новых работников и аттестаций</div>
+                </div>
               </li>
             </ul>
             <div className="flex flex-wrap gap-2 md:gap-4 justify-center lg:justify-start">
