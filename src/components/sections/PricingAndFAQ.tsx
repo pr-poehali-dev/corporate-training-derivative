@@ -52,7 +52,7 @@ const PricingAndFAQ = () => {
           </div>
           
           {/* Mobile: Slider */}
-          <div className="relative md:hidden max-w-sm mx-auto px-4">
+          <div className="relative md:hidden px-3">
             <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
@@ -63,37 +63,37 @@ const PricingAndFAQ = () => {
                 {plans.map((plan, idx) => (
                   <div 
                     key={idx} 
-                    className="w-full flex-shrink-0 px-2"
+                    className="w-full flex-shrink-0 px-1"
                   >
                     <Card className={`h-full ${
                       plan.popular ? 'border-primary shadow-xl relative' : ''
                     }`}>
                       {plan.popular && (
                         <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                          <Badge className="bg-primary text-xs">Популярный</Badge>
+                          <Badge className="bg-primary text-xs px-3 py-1">Популярный</Badge>
                         </div>
                       )}
-                      <CardHeader className="p-4">
-                        <CardTitle className="text-lg">{plan.name}</CardTitle>
-                        <div className="text-sm text-muted-foreground">{plan.users}</div>
-                        <div className="text-2xl font-bold mt-3">
+                      <CardHeader className="p-5">
+                        <CardTitle className="text-xl">{plan.name}</CardTitle>
+                        <div className="text-sm text-muted-foreground mt-1">{plan.users}</div>
+                        <div className="text-3xl font-bold mt-4">
                           {plan.price}
-                          {plan.price !== 'По запросу' && <span className="text-sm text-muted-foreground">/мес</span>}
+                          {plan.price !== 'По запросу' && <span className="text-base text-muted-foreground">/мес</span>}
                         </div>
                       </CardHeader>
-                      <CardContent className="p-4 pt-0">
+                      <CardContent className="p-5 pt-0">
                         <Button 
-                          className="w-full mb-4 text-sm" 
+                          className="w-full mb-5 text-base h-11" 
                           variant={plan.popular ? 'default' : 'outline'}
                           onClick={scrollToDemo}
                         >
                           {plan.price === 'По запросу' ? 'Связаться' : 'Начать'}
                         </Button>
-                        <ul className="space-y-2">
+                        <ul className="space-y-3">
                           {plan.features.map((feature, i) => (
                             <li key={i} className="flex items-start gap-2">
-                              <Icon name="Check" className="text-primary shrink-0 mt-0.5" size={16} />
-                              <span className="text-xs">{feature}</span>
+                              <Icon name="Check" className="text-primary shrink-0 mt-0.5" size={18} />
+                              <span className="text-sm leading-relaxed">{feature}</span>
                             </li>
                           ))}
                         </ul>
