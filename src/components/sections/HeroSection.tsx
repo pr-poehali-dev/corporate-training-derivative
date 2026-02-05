@@ -16,9 +16,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
           <div className="animate-fade-in text-left">
             <Badge className="mb-2 md:mb-4 text-xs" variant="secondary">KOP</Badge>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-6 leading-tight">
-              Корпоративная обучающая платформа
-            </h1>
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-6 leading-tight">Корпоративная обучающая платформа с AI</h1>
             <ul className="mb-4 md:mb-8 space-y-2 md:space-y-3 list-none">
               <li className="flex items-start gap-2">
                 <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5 md:mt-1" size={16} />
