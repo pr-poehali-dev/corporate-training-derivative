@@ -20,9 +20,6 @@ const Values = () => {
         <div className="text-center mb-6 md:mb-16">
           <Badge className="mb-2 md:mb-4 text-xs">Ценности для бизнеса</Badge>
           <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Что получит ваша компания</h2>
-          <p className="text-sm md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-            Измеримые результаты для вашего бизнеса
-          </p>
         </div>
         
         <div className="relative md:hidden">
