@@ -27,7 +27,8 @@ const HeroSection = () => {
               </li>
               <li className="flex items-start gap-2">
                 <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5 md:mt-1" size={16} />
-                <div></div>
+                <div>
+                  <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Новичок на борту?</div>
                   <div className="text-xs sm:text-sm md:text-base text-muted-foreground">Он разберётся за неделю, а не за два месяца</div>
                 </div>
               </li>
