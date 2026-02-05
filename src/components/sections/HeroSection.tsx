@@ -21,7 +21,8 @@ const HeroSection = () => {
               <li className="flex items-start gap-2">
                 <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5 md:mt-1" size={16} />
                 <div>
-                  <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Систематизируйте и развивайте</div>
+                  <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Систематизируйте и развивайте 
+корпоративные знания</div>
                   <div className="text-xs sm:text-sm md:text-base text-muted-foreground">AI создаст курс за 5 минут</div>
                 </div>
               </li>
