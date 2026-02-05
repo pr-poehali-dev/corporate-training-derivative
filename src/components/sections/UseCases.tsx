@@ -54,16 +54,16 @@ const UseCases = () => {
           </h2>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-6xl mx-auto">
           <div className="overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {cases.map((item, idx) => (
-                <div key={idx} className="w-full flex-shrink-0 px-4">
+                <div key={idx} className="w-full flex-shrink-0 px-4 md:px-8">
                   <Card className="group hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                    <div className="relative h-64 md:h-80 overflow-hidden">
+                    <div className="relative h-80 md:h-[500px] overflow-hidden">
                       <img 
                         src={item.image} 
                         alt={item.title}
@@ -71,20 +71,20 @@ const UseCases = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
                       <div className="absolute bottom-6 left-6 right-6">
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className="w-12 h-12 bg-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                            <Icon name={item.icon} className="text-primary" size={24} />
+                        <div className="flex items-center gap-4 mb-2">
+                          <div className="w-14 h-14 bg-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                            <Icon name={item.icon} className="text-primary" size={28} />
                           </div>
-                          <h3 className="text-2xl font-bold text-foreground">{item.title}</h3>
+                          <h3 className="text-2xl md:text-3xl font-bold text-foreground">{item.title}</h3>
                         </div>
                       </div>
                     </div>
-                    <CardContent className="p-8">
-                      <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
+                    <CardContent className="p-8 md:p-10">
+                      <p className="text-muted-foreground mb-6 leading-relaxed text-lg md:text-xl">
                         {item.description}
                       </p>
-                      <div className="flex items-center gap-2 text-base font-semibold text-primary">
-                        <Icon name="TrendingUp" size={20} />
+                      <div className="flex items-center gap-2 text-base md:text-lg font-semibold text-primary">
+                        <Icon name="TrendingUp" size={22} />
                         {item.stat}
                       </div>
                     </CardContent>
