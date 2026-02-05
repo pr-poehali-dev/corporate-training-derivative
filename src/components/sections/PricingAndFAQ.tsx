@@ -186,9 +186,6 @@ const PricingAndFAQ = () => {
           <div className="text-center mb-6 md:mb-12">
             <Badge className="mb-2 md:mb-4 text-xs">Демо-версия</Badge>
             <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Попробуйте бесплатно</h2>
-            <p className="text-sm md:text-xl text-muted-foreground px-4">
-              Оставьте заявку, и мы предоставим доступ к демо-версии платформы
-            </p>
           </div>
           <Card>
             <CardContent className="p-4 md:p-6">
