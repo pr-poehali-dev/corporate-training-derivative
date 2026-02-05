@@ -30,7 +30,6 @@ const HeroSection = () => {
                 <div>
                   <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Генерируйте увлекательные уроки и курсы
 даже по самым скучным регламентам</div>
-                  <div className="text-xs sm:text-sm md:text-base text-muted-foreground">Он разберётся за неделю, а не за два месяца</div>
                 </div>
               </li>
               <li className="flex items-start gap-2">
