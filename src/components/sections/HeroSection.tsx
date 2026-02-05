@@ -35,7 +35,8 @@ const HeroSection = () => {
               <li className="flex items-start gap-2">
                 <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5 md:mt-1" size={16} />
                 <div>
-                  <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Эксперт увольняется?</div>
+                  <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Повышайте качество онбординга новых работников
+ и аттестаций</div>
                   <div className="text-xs sm:text-sm md:text-base text-muted-foreground">Его знания останутся в компании</div>
                 </div>
               </li>
