@@ -69,17 +69,14 @@ const UseCases = () => {
                         alt={item.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <div className="flex items-center gap-4 mb-2">
-                          <div className="w-14 h-14 bg-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                            <Icon name={item.icon} className="text-primary" size={28} />
-                          </div>
-                          <h3 className="text-2xl md:text-3xl font-bold text-foreground">{item.title}</h3>
-                        </div>
-                      </div>
                     </div>
                     <CardContent className="p-8 md:p-10">
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center">
+                          <Icon name={item.icon} className="text-primary" size={28} />
+                        </div>
+                        <h3 className="text-2xl md:text-3xl font-bold">{item.title}</h3>
+                      </div>
                       <p className="text-muted-foreground mb-6 leading-relaxed text-lg md:text-xl">
                         {item.description}
                       </p>
