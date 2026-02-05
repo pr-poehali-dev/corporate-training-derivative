@@ -31,7 +31,7 @@ const HowToStart = () => {
                     <CardHeader className="p-4">
                       <div className="mb-4">
                         <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto shadow-lg shadow-primary/30">
-                          <Icon name={step.icon} className="text-primary-foreground" size={24} />
+                          <span className="text-primary-foreground text-2xl font-bold">{idx + 1}</span>
                         </div>
                       </div>
                       <CardTitle className="text-lg mb-2">{step.title}</CardTitle>
@@ -79,7 +79,7 @@ const HowToStart = () => {
               <CardHeader className="p-6">
                 <div className="mb-4">
                   <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto shadow-lg shadow-primary/30">
-                    <Icon name={step.icon} className="text-primary-foreground" size={24} />
+                    <span className="text-primary-foreground text-3xl font-bold">{idx + 1}</span>
                   </div>
                 </div>
                 <CardTitle className="text-2xl mb-2">{step.title}</CardTitle>
