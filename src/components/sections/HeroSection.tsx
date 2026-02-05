@@ -37,7 +37,6 @@ const HeroSection = () => {
                 <div>
                   <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Повышайте качество онбординга новых работников
  и аттестаций</div>
-                  <div className="text-xs sm:text-sm md:text-base text-muted-foreground">Его знания останутся в компании</div>
                 </div>
               </li>
             </ul>
