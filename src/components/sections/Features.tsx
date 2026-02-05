@@ -8,20 +8,20 @@ const Features = () => {
   const [featuresIndex, setFeaturesIndex] = useState(0);
 
   const featuresData = [
-    { icon: 'Sparkles', title: 'Генератор курсов на ИИ', desc: 'Создавайте полноценные курсы из ваших документов за минуты с помощью искусственного интеллекта', highlight: true },
-    { icon: 'Boxes', title: 'Конструктор курсов', desc: 'Создавайте интерактивные курсы с видео, тестами и заданиями' },
-    { icon: 'Users', title: 'Управление командой', desc: 'Назначайте курсы, отслеживайте прогресс сотрудников' },
-    { icon: 'BarChart3', title: 'Аналитика', desc: 'Детальные отчёты по эффективности обучения' },
-    { icon: 'Award', title: 'Награды', desc: 'Автоматическая выдача наград после прохождения' },
-    { icon: 'Smartphone', title: 'Мобильное приложение', desc: 'Обучение в любое время с телефона или планшета' },
+    { icon: 'Sparkles', title: 'AI делает курс за вас', desc: 'Просто скиньте документы — AI сам разберёт их, создаст уроки и тесты. Вам останется только посмотреть', highlight: true },
+    { icon: 'Boxes', title: 'Или соберите сами', desc: 'Хотите сделать руками? Лёгкий конструктор с видео, тестами и заданиями — всё на своих местах' },
+    { icon: 'Users', title: 'Видно, кто что прошёл', desc: 'Назначили курс команде — сразу видите, кто молодец, а кто ещё не начал. Всё в одном месте' },
+    { icon: 'BarChart3', title: 'Отчёты, которые понятны', desc: 'Никаких сложных графиков. Простые цифры: сколько прошли, где застряли, что нужно улучшить' },
+    { icon: 'Award', title: 'Бейджики и награды', desc: 'Прошёл курс — получил значок. Людям нравится, когда их успехи видны' },
+    { icon: 'Smartphone', title: 'Учись где удобно', desc: 'Дома на диване, в метро, на обеде — приложение работает на телефоне и планшете' },
   ];
 
   return (
     <section id="возможности" className="py-8 md:py-20 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-6 md:mb-16">
-          <Badge className="mb-2 md:mb-4 text-xs">Возможности</Badge>
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Всё для эффективного обучения</h2>
+          <Badge className="mb-2 md:mb-4 text-xs">Что умеет</Badge>
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Всё, что нужно для обучения</h2>
         </div>
         
         <div className="relative md:hidden">

@@ -8,18 +8,18 @@ const Values = () => {
   const [valuesIndex, setValuesIndex] = useState(0);
 
   const valuesData = [
-    { icon: 'Sparkles', title: 'Автоматическое создание курсов', desc: 'Автоматическое создание увлекательных уроков и тестов с помощью AI и простого конструктора по загруженным документам', highlight: true },
-    { icon: 'ShieldCheck', title: 'Снижение ошибок и потерь', desc: 'Снижение ошибок, аварий и потерь из-за низкой квалификации кадров' },
-    { icon: 'Gamepad2', title: 'Геймификация обучения', desc: 'Снижение внутреннего сопротивления сотрудников к обучению за счет геймофикации и цифровых наград' },
-    { icon: 'TrendingUp', title: 'Рост корпоративной культуры', desc: 'Повышение уровня корпоративной культуры и стандартов, сокращение сроков по адаптации новых специалистов' },
+    { icon: 'Sparkles', title: 'Курс из документов за 5 минут', desc: 'Загрузили PDF с регламентом? AI сам сделает из него курс с уроками и тестами. Вам останется только проверить', highlight: true },
+    { icon: 'ShieldCheck', title: 'Меньше ошибок на производстве', desc: 'Когда люди знают, как работать правильно — аварий становится меньше. Просто потому что они поняли, а не просто расписались' },
+    { icon: 'Gamepad2', title: 'Обучаться становится интересно', desc: 'Добавили бейджики, рейтинги и доску почёта. Теперь люди сами хотят проходить курсы, а не отмазываются' },
+    { icon: 'TrendingUp', title: 'Новички выходят на работу быстрее', desc: 'Вместо двух месяцев разборок с наставником — неделя обучения по курсу. И все счастливы' },
   ];
 
   return (
     <section id="ценности" className="py-8 md:py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
         <div className="text-center mb-6 md:mb-16">
-          <Badge className="mb-2 md:mb-4 text-xs">Ценности для бизнеса</Badge>
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Что получит ваша компания</h2>
+          <Badge className="mb-2 md:mb-4 text-xs">Польза для вашего бизнеса</Badge>
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Какие проблемы решаем?</h2>
         </div>
         
         <div className="relative md:hidden">

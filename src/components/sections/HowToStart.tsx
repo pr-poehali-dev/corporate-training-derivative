@@ -7,16 +7,16 @@ const HowToStart = () => {
   const [processIndex, setProcessIndex] = useState(0);
 
   const processData = [
-    { num: '01', icon: 'MessageSquare', title: 'Заявка', desc: 'Оставьте заявку на показ решения и обсуждения ваших корпоративных задач и вызовов' },
-    { num: '02', icon: 'Rocket', title: 'Пилотирование', desc: 'Внедрение бесплатной версии продукта, брендирование и пилотирование' },
-    { num: '03', icon: 'FileCheck', title: 'Заключение договора', desc: 'Заключение договора и оплата продукта по выбранному тарифу' },
+    { num: '01', icon: 'MessageSquare', title: 'Напишите нам', desc: 'Оставьте заявку — покажем, как всё работает, и обсудим ваши задачи' },
+    { num: '02', icon: 'Rocket', title: 'Попробуйте бесплатно', desc: 'Дадим тестовый доступ, настроим под вас. Попробуете на реальных задачах' },
+    { num: '03', icon: 'FileCheck', title: 'Подписываем договор', desc: 'Всё подошло? Оформляем договор и выбираем тариф. Всё просто' },
   ];
 
   return (
     <section id="как-работает" className="py-8 md:py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
         <div className="text-center mb-6 md:mb-16">
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Как начать работать</h2>
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Как начать?</h2>
         </div>
         
         <div className="relative md:hidden">

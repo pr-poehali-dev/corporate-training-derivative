@@ -9,13 +9,13 @@ const Advantages = () => {
         <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
           <div>
             <Badge className="mb-3 text-xs">Преимущества</Badge>
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">Почему выбирают нас</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">Почему с нами удобно?</h2>
             <div className="space-y-4 md:space-y-6">
               {[
-                { icon: 'Zap', title: 'Быстрое внедрение', desc: 'Запуск системы за 2 недели, не 6 месяцев' },
-                { icon: 'Paintbrush', title: 'Гибкая настройка', desc: 'Адаптация под любые корпоративные процессы' },
-                { icon: 'Shield', title: 'Безопасность данных', desc: 'Соответствие требованиям 152-ФЗ и GDPR' },
-                { icon: 'Headphones', title: 'Поддержка 24/7', desc: 'Техподдержка и методическая помощь всегда на связи' },
+                { icon: 'Zap', title: 'Запуск за 2 недели', desc: 'Без долгого внедрения. Настроили — и сразу работаете' },
+                { icon: 'Paintbrush', title: 'Настроим под вас', desc: 'Сделаем именно так, как вам нужно. Никаких «а у нас так не может»' },
+                { icon: 'Shield', title: 'Данные в безопасности', desc: 'Соблюдаем 152-ФЗ и GDPR. Ваши данные под защитой' },
+                { icon: 'Headphones', title: 'Всегда на связи', desc: 'Что-то пошло не так? Напишите — поможем. В любое время' },
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-3">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
@@ -33,9 +33,9 @@ const Advantages = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl transform rotate-3"></div>
             <Card className="relative">
               <CardHeader className="p-4 md:p-6">
-                <CardTitle className="text-lg md:text-2xl">Настройка под специфику компании</CardTitle>
+                <CardTitle className="text-lg md:text-2xl">Подгоним под вас</CardTitle>
                 <CardDescription className="text-sm md:text-base">
-                  Мы адаптируем платформу под ваши уникальные бизнес-процессы
+                  У каждой компании свои процессы. Мы это понимаем и делаем именно так, как нужно вам
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-3 p-4 md:p-6 pt-0">

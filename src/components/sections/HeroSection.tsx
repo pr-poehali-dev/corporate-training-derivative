@@ -16,27 +16,27 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
           <div className="animate-fade-in text-left">
             <Badge className="mb-2 md:mb-4 text-xs" variant="secondary">KOP</Badge>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-6 leading-tight">Корпоративная образовательная платформа с AI</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-6 leading-tight">Превращаем ваши документы в крутые курсы</h1>
             <ul className="mb-4 md:mb-8 space-y-2 md:space-y-3 list-none">
               <li className="flex items-start gap-2">
                 <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5 md:mt-1" size={16} />
                 <div>
-                  <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Систематизируйте и развивайте</div>
-                  <div className="text-xs sm:text-sm md:text-base text-muted-foreground">корпоративные знания</div>
+                  <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Загрузили PDF с регламентами?</div>
+                  <div className="text-xs sm:text-sm md:text-base text-muted-foreground">AI создаст курс за 5 минут</div>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5 md:mt-1" size={16} />
                 <div>
-                  <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Генерируйте увлекательные уроки и курсы</div>
-                  <div className="text-xs sm:text-sm md:text-base text-muted-foreground">даже по самым скучным регламентам</div>
+                  <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Новичок на борту?</div>
+                  <div className="text-xs sm:text-sm md:text-base text-muted-foreground">Он разберётся за неделю, а не за два месяца</div>
                 </div>
               </li>
               <li className="flex items-start gap-2">
                 <Icon name="Check" className="text-primary flex-shrink-0 mt-0.5 md:mt-1" size={16} />
                 <div>
-                  <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Повышайте качество онбординга</div>
-                  <div className="text-xs sm:text-sm md:text-base text-muted-foreground">новых работников и аттестаций</div>
+                  <div className="text-sm sm:text-base md:text-xl font-bold text-foreground leading-snug">Эксперт увольняется?</div>
+                  <div className="text-xs sm:text-sm md:text-base text-muted-foreground">Его знания останутся в компании</div>
                 </div>
               </li>
             </ul>
@@ -47,7 +47,7 @@ const HeroSection = () => {
                 onClick={scrollToDemo}
               >
                 <Icon name="Play" className="mr-2" size={16} />
-                Смотреть демо
+                Попробовать бесплатно
               </Button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 mt-6 md:mt-12">

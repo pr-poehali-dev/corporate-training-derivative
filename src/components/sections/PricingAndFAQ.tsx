@@ -57,7 +57,7 @@ const PricingAndFAQ = () => {
         <div className="container mx-auto">
           <div className="text-center mb-6 md:mb-16">
             <Badge className="mb-2 md:mb-4 text-xs">Тарифы</Badge>
-            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Прозрачные цены</h2>
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-4 px-4">Сколько стоит?</h2>
           </div>
           
           {/* Mobile: Slider */}
