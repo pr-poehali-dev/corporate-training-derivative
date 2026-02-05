@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
 const UseCases = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const cases = [
     {
       title: 'Сохранение экспертизы',
@@ -33,6 +37,14 @@ const UseCases = () => {
     },
   ];
 
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev === 0 ? cases.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev === cases.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <section id="кейсы" className="py-20 md:py-32 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4">
@@ -45,36 +57,74 @@ const UseCases = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {cases.map((item, idx) => (
-            <Card key={idx} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 bg-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                      <Icon name={item.icon} className="text-primary" size={20} />
+        <div className="relative max-w-4xl mx-auto">
+          <div className="overflow-hidden">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {cases.map((item, idx) => (
+                <div key={idx} className="w-full flex-shrink-0 px-4">
+                  <Card className="group hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                    <div className="relative h-64 md:h-80 overflow-hidden">
+                      <img 
+                        src={item.image} 
+                        alt={item.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+                      <div className="absolute bottom-6 left-6 right-6">
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className="w-12 h-12 bg-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                            <Icon name={item.icon} className="text-primary" size={24} />
+                          </div>
+                          <h3 className="text-2xl font-bold text-foreground">{item.title}</h3>
+                        </div>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
-                  </div>
+                    <CardContent className="p-8">
+                      <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
+                        {item.description}
+                      </p>
+                      <div className="flex items-center gap-2 text-base font-semibold text-primary">
+                        <Icon name="TrendingUp" size={20} />
+                        {item.stat}
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
-              </div>
-              <CardContent className="p-6">
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {item.description}
-                </p>
-                <div className="flex items-center gap-2 text-sm font-semibold text-primary">
-                  <Icon name="TrendingUp" size={16} />
-                  {item.stat}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+              ))}
+            </div>
+          </div>
+
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 bg-background/80 backdrop-blur-sm shadow-xl hover:bg-background w-12 h-12"
+            onClick={goToPrevious}
+          >
+            <Icon name="ChevronLeft" size={24} />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 bg-background/80 backdrop-blur-sm shadow-xl hover:bg-background w-12 h-12"
+            onClick={goToNext}
+          >
+            <Icon name="ChevronRight" size={24} />
+          </Button>
+
+          <div className="flex justify-center gap-2 mt-8">
+            {cases.map((_, idx) => (
+              <button
+                key={idx}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  idx === currentIndex ? 'bg-primary w-8' : 'bg-muted-foreground/30'
+                }`}
+                onClick={() => setCurrentIndex(idx)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
