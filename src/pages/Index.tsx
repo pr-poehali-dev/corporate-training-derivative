@@ -32,7 +32,7 @@ const Index = () => {
               <div className="w-8 h-8 md:w-10 md:h-10 bg-primary rounded-lg flex items-center justify-center">
                 <Icon name="GraduationCap" className="text-primary-foreground" size={20} />
               </div>
-              <span className="text-lg md:text-xl font-bold">KOP</span>
+              <span className="text-lg md:text-xl font-bold">Движ</span>
             </div>
             <div className="hidden md:flex items-center gap-6">
               {['Главная', 'Ценности', 'Возможности', 'Кейсы', 'Как начать', 'Преимущества', 'Цены', 'FAQ', 'Партнёрам'].map((item) => (
