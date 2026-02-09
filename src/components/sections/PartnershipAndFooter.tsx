@@ -80,6 +80,19 @@ const PartnershipAndFooter = () => {
           </div>
         </div>
       </section>
+
+      <footer className="bg-muted/30 border-t py-6 md:py-8 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+            <p className="text-sm text-muted-foreground">
+              © 1988–2026 ИП ЖУКОВ Д.М.
+            </p>
+            <p className="text-xs md:text-sm text-muted-foreground max-w-2xl">
+              Используем cookies для корректной работы сайта, персонализации пользователей и других целей, предусмотренных политикой обработки персональных данных.
+            </p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
